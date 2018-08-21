@@ -1,0 +1,12 @@
+mat-list {
+  max-height: 600px;
+  overflow: scroll;
+}
+
+mat-list-item {
+  text-transform: capitalize;
+}
+
+.header {
+  padding: 20px 0;
+}

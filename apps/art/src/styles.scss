@@ -1,0 +1,46 @@
+@import './sass/variables';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300|Oswald:700');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: no-repeat fixed linear-gradient(110deg, hsl(0, 0%, 20%) 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, hsl(0, 0%, 22%) 70%, hsl(0, 0%, 24%) 70%);
+}
+
+mat-card {
+  background-color: hsl(0, 0%, 23%) !important;
+}
+
+hr {
+  float: left;
+  width: 150px;
+  border: solid 1px $primary;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  margin: 40px auto;
+  justify-content: space-around;
+}
+
+.cells {
+  padding: 15px;
+}
+
+.cell-1 {
+  width: 60%;
+}
+
+.cell-2 {
+  width: 40%;
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+* {
+  font-family: 'Nunito', sans-serif;
+  color: hsl(231, 21%, 20%);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: no-repeat fixed linear-gradient(70deg, #1e212e  30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #26293A 60%, hsl(231, 21%, 21%) 60%);
+}
+
+mat-card {
+  padding: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto;
+}
+
+.cells {
+  width: 40%;
+  padding: 15px;
+}
+
+.card-header {
+  display: flex;
+  font-size: 35px;
+  border-radius: 2px;
+  justify-content: space-between;
+  border-bottom: 2px solid #20BF55;
+  font-family: "Oswald", sans-serif;
+}
+

@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="title">{{artist?.name}}</div>
+    <hr>
+  </div>
+
+  <div class="container">
+
+    <div class="cells cell-1">
+        <api-album-list [albums]="albums"
+                        (select)="selectAlbum($event)">
+
+        </api-album-list>
+    </div>
+
+    <div class="cells cell-2">
+      <api-album-details [selectedAlbum]="selectedAlbum"
+                         [album]="album">
+
+      </api-album-details>
+    </div>
+
+  </div>

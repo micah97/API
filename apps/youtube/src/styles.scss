@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300, 700|Oswald:700');
+@import './sass/variables';
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: no-repeat fixed linear-gradient(110deg, hsl(0, 0%, 20%) 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, hsl(0, 0%, 22%) 70%, hsl(0, 0%, 24%) 70%);
+}
+
+mat-card {
+  background-color: #4d4d4d !important;
+}
+
+mat-card * {
+  color: whitesmoke;
+}
+
+mat-list {
+  overflow: scroll;
+  max-height: 500px;
+  margin-bottom: 35px;
+}
+
+mat-list-item {
+  height: 120px !important;
+  border-bottom: solid 1px hsl(0, 0%, 27%);
+}
+
+mat-list-item:hover {
+  background-color: #666666;
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  margin: 40px auto;
+  justify-content: space-around;
+}
+
+.cells {
+  width: 40%;
+  padding: 15px;
+}
+
+.card {
+  padding: 0 !important;
+}
+
+.card-header {
+  color: whitesmoke;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: hsl(0, 0%, 25%);
+  border-bottom: 2px solid $primary;
+  font-size: 27px;
+  padding: 20px 20px 10px 20px;
+}
+
+.card-padding {
+  padding: 20px;
+}

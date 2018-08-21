@@ -1,0 +1,24 @@
+<mat-card *ngIf="universities"> <!-- *ngIf="condition" -->
+  <div class="h2">UNIVERSITIES</div>
+    <hr class="hr">
+    <br>
+    <!-- <div class="list-header">
+      <div class="mini-cell">No.</div>
+      <div class="cell">Name</div>
+      <div class="cell">Nationality</div>
+      <div class="cell">Position</div>
+    </div> -->
+    <mat-list>
+      <a *ngFor="let uni of universities" target="_blank" [href]="uni?.web_pages">
+        <mat-list-item>
+          <div class="mat-list-item">
+            <div class="name-cell">{{uni.name}}</div>
+            <span class="flex"></span>
+            <div class="cell">{{uni.country}}</div>
+          </div>
+          <hr class="item-hr">
+      </mat-list-item>
+    </a>
+  </mat-list>
+
+</mat-card>

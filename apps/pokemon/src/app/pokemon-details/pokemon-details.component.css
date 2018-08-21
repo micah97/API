@@ -1,0 +1,40 @@
+.card-header {
+  display: flex;
+}
+
+button {
+  background-color: #0A81D1;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+mat-card-actions {
+  width: 100%;
+  margin-bottom: 0 !important;
+  justify-content: right;
+}
+
+mat-form-field {
+  width: 40%;
+}
+
+.header {
+  padding: 20px 0;
+}
+
+span {
+  flex: 1 1 100%;
+}
+
+img {
+  height: 60px;
+  width: 60px !important;
+  float: right;
+  padding-top: 10px;
+}

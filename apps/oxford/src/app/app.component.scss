@@ -1,0 +1,19 @@
+@import "../sass/variables";
+
+.h1 {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 40px;
+}
+
+.ox {
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: auto auto 30px;
+  .dictionary {
+    color: $primary;
+  }
+}

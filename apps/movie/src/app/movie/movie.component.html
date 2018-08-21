@@ -1,0 +1,61 @@
+<mat-card  *ngIf="searchedMovie">
+  <div class="title">
+    <div>
+      <h1>{{searchedMovie.Title}}</h1>
+      <hr>
+    </div>
+    <h1 class="year">{{searchedMovie.Year}}</h1>
+  </div>
+  <br>
+
+  <div class="info">
+    <img [src]="searchedMovie.Poster">
+
+    <div class="info-container">
+      <div class="row">
+        <div class="cell">
+          <div class="header">Rating:</div>
+          <hr>
+          <br>
+          <div class="oswald">{{searchedMovie.Rated}}</div>
+        </div>
+
+        <div class="director cell">
+          <div class="header">Director:</div>
+          <hr>
+          <br>
+          {{searchedMovie.Director}}
+        </div>
+
+        <div class="actors cell">
+          <div class="header">Actors:</div>
+          <hr>
+          <br>
+          {{searchedMovie.Actors}}
+          <br>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="plot">
+          <div class="header">Plot:</div>
+          <hr class="plot-hr">
+          <br>
+          <p>{{searchedMovie.Plot}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="plot">
+          <div class="header">Awards:</div>
+          <hr class="plot-hr">
+          <br>
+          <p>{{searchedMovie.Awards}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</mat-card>

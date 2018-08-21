@@ -1,0 +1,13 @@
+mat-list {
+  max-height: 600px;
+  overflow: scroll;
+}
+
+mat-list-item:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: whitesmoke;
+}

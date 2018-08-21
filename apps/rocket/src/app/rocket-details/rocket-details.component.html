@@ -1,0 +1,49 @@
+<mat-card *ngIf="selectedRocket">
+  <div class="card-header">
+    {{selectedRocket.name}}
+    <span class="country">{{selectedRocket.country}}</span>
+  </div>
+
+  <div class="card-padding">
+    <form *ngIf="selectedRocket" [formGroup]="group" (submit)="submit(group)">
+
+      <div class="holder">
+        <mat-form-field>
+          <input matInput [value]="selectedRocket.company" type="text" name="company" placeholder="Company" formControlName="company">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput [value]="selectedRocket.height.meters" type="text" name="height" placeholder="Height" formControlName="height">
+          <span matSuffix>m</span>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput [value]="selectedRocket.mass.kg" type="text" name="mass" placeholder="Mass" formControlName="mass">
+          <span matSuffix>kg</span>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput [value]="selectedRocket.diameter.meters" type="text" name="diameter" placeholder="Diameter" formControlName="diameter">
+          <span matSuffix>m</span>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput [value]="selectedRocket.cost_per_launch" type="text" name="cost" placeholder="Cost (in USD)" formControlName="cost_per_launch">
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput [value]="selectedRocket.success_rate_pct" type="text" name="success" placeholder="Success Rate" formControlName="success_rate_pct">
+          <span matSuffix>%</span>
+        </mat-form-field>
+      </div>
+
+      <div class="btn-holder">
+        <button class="clear" mat-raised-button (click)="reset.emit()">Clear</button>
+        <button mat-raised-button type="submit">Update</button>
+      </div>
+
+    </form>
+  </div>
+</mat-card>

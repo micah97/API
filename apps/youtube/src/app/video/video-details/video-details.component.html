@@ -1,0 +1,8 @@
+<mat-card *ngIf="selectedVideo">
+  <iframe [src]="setEmbed()" frameborder="0" width="550px" height="400px"></iframe>
+  <div class="name">{{selectedVideo.title}}</div>
+
+  <p class="desc">
+    {{selectedVideo.description}}
+  </p>
+</mat-card>

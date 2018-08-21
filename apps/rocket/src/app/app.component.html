@@ -1,0 +1,18 @@
+<div class="container">
+
+  <div class="cells cell-1">
+    <api-rocket-list [rockets]="rockets"
+                     (selectRocket)="selectRocket($event)">
+
+    </api-rocket-list>
+  </div>
+
+  <div class="cells cell-2">
+    <api-rocket-details [selectedRocket]="selectedRocket"
+                        [group]="form"
+                        (reset)="resetForm($event)">
+
+    </api-rocket-details>
+  </div>
+
+</div>

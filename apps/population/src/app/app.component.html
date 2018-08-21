@@ -1,0 +1,23 @@
+<div class="header">All the children born in the Golden Year
+  <br>
+  <span>(A.K.A 1997, The year I was born)</span>
+</div>
+
+<div class="container">
+
+  <div class="cells cell-1">
+    <api-population-list [countries]="countries"
+                         (selectCountry)="selectCountry($event)">
+
+    </api-population-list>
+  </div>
+
+  <div class="cells cell-2">
+    <api-population-details [selectedCountry]="selectedCountry"
+                            [group]="form"
+                            (resetForm)="reset($event)">
+
+    </api-population-details>
+  </div>
+
+</div>

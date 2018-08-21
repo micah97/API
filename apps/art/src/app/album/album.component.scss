@@ -1,0 +1,16 @@
+@import '../sass/variables';
+
+hr {
+  width: 180px;
+  border: solid 2px $primary;
+}
+
+.header {
+  padding: 10px 20px;
+}
+
+.title {
+  color: white;
+  font-size: 80px;
+  font-family: 'Oswald', sans-serif;
+}

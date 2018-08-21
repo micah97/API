@@ -1,0 +1,62 @@
+@import "../../sass/variables";
+
+h1 {
+  margin-bottom: 5px;
+}
+
+hr {
+  float: left;
+  width: 60%;
+  border: solid 1px $primary;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
+
+.cell {
+  width: 30%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  justify-content: space-around;
+}
+
+.info {
+  display: flex;
+  * {
+    font-size: 17px;
+  }
+}
+
+.info-container {
+  padding-left: 20px;
+  width: 100%;
+}
+
+.header {
+  font-size: 25px !important;
+}
+
+.title {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-size: 45px !important;
+}
+
+.plot {
+  max-height: 160px;
+  width: 100%;
+  .plot-hr {
+    width: 150px;
+  }
+}

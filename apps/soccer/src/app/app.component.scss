@@ -1,0 +1,11 @@
+@import '../sass/variables';
+
+.header {
+  padding: 20px;
+}
+
+.title {
+  color: $primary;
+  font-size: 65px;
+  font-family: 'Montserrat', sans-serif;
+}

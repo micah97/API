@@ -1,0 +1,19 @@
+mat-grid-list {
+  width: 900px;
+  overflow: scroll;
+  max-height: 600px;
+}
+
+mat-grid-tile {
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+mat-grid-tile:hover {
+  z-index: 100;
+  cursor: pointer;
+  transition: 0.25s;
+  transform: scale(1.05);
+  transition-timing-function: linear;
+}

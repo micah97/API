@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,900');
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+* {
+  font-family: 'Muli', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: no-repeat fixed linear-gradient(110deg, hsl(0, 0%, 95%) 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, hsl(0, 0%, 97%) 70%, #D7263D 70%);
+}
+
+mat-card {
+  padding: 0 !important;
+  background-color: white;
+  overflow: hidden;
+}
+
+.card-padding {
+  padding: 20px;
+}
+
+.card-header {
+  color: gray;
+  display: flex;
+  font-size: 27px;
+  font-weight: bold;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 20px 20px 10px 20px;
+  justify-content: space-between;
+  border-bottom: 2px solid #D7263D;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  margin: 40px auto;
+  justify-content: space-around;
+}
+
+.cells {
+  width: 40%;
+  padding: 15px;
+}

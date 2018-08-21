@@ -1,0 +1,27 @@
+<mat-card>
+  <div class="card-header">
+    {{selectedCountry ? selectedCountry.country : 'Select a Country'}}
+    <span class="year">{{selectedCountry ? selectedCountry.year : ''}}</span>
+  </div>
+
+  <div class="card-padding">
+    <form *ngIf="selectedCountry" [formGroup]="group" (submit)="submit(group.value)" class="data">
+
+      <mat-form-field>
+        <input matInput [value]="selectedCountry.females" type="text" name="females" placeholder="Females" formControlName="females">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [value]="selectedCountry.males" type="text" name="males" placeholder="Males" formControlName="males">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [value]="selectedCountry.total" type="text" name="total" placeholder="Total" formControlName="total">
+      </mat-form-field>
+
+      <!--<mat-card-actions>-->
+        <button mat-mini-fab class="cancel" (click)="reset()" mat-raised-button><mat-icon>clear</mat-icon></button>
+        <button mat-mini-fab class="add" type="submit" mat-raised-button><mat-icon>add</mat-icon></button>
+      <!--</mat-card-actions>-->
+
+    </form>
+  </div>
+</mat-card>

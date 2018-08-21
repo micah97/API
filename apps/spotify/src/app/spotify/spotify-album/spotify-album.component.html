@@ -1,0 +1,5 @@
+<mat-grid-list cols="3" rowHeight="300px" gutterSize="5px">
+  <mat-grid-tile (click)="selectAlbum.emit(album)" *ngFor="let album of albums">
+      <img [src]="album.images[1].url">
+    </mat-grid-tile>
+</mat-grid-list>

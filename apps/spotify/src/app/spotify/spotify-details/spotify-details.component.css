@@ -1,0 +1,53 @@
+mat-card {
+  padding-bottom: 20px;
+}
+
+mat-card * {
+  color: #b3b3b3;
+}
+
+mat-list {
+  margin-bottom: 35px;
+  max-height: 430px;
+  overflow: scroll;
+}
+
+mat-list-item {
+  display: flex;
+  border-bottom: solid 1px hsl(0, 0%, 27%);
+}
+
+mat-list-item:hover {
+  background-color: #666666;
+  cursor: pointer;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  color: hsl(0, 0%, 27%);
+  box-shadow: none !important;
+  background-color: hsl(0, 0%, 23%) !important;
+  border: solid 1px hsl(0, 0%, 27%);
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  flex: 1 1 100%;
+}
+
+.h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 43px;
+  color: white !important;
+}
+
+.release {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}

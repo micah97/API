@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="header">
+    <div class="h1 dictionary">UNIVERSITY</div>
+    <div class="h1 ox">ARCHIVE</div>
+  </div>
+
+  <div class="cells">
+    <api-search (search)="getUniversities($event)">
+
+    </api-search>
+  </div>
+
+  <div class="cells">
+    <api-definition [universities]="universities">
+
+    </api-definition>
+  </div>
+
+</div>

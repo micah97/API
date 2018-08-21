@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="cells">
+    <api-pokemon-list [pokemon]="pokemon"
+                      (selectPoke)="selectPoke($event)">
+    </api-pokemon-list>
+  </div>
+
+  <div class="cells">
+    <api-pokemon-details [selectedPokemon]="selectedPokemon"
+                         [group]="form"
+                         (resetForm)="reset($event)">
+    </api-pokemon-details>
+  </div>
+</div>

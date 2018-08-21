@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="header">
+    <!--<div class="h1 ox">OXFORD</div>-->
+    <!--<div class="h1 dictionary">DICTIONARY</div>-->
+  </div>
+
+  <div class="cells">
+    <api-search (search)="searchMovies($event)">
+
+    </api-search>
+  </div>
+
+  <div class="cells">
+    <api-movie [searchedMovie]="searchedMovie">
+
+    </api-movie>
+  </div>
+
+</div>

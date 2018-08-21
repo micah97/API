@@ -1,0 +1,12 @@
+<mat-card>
+  <div class="card-header">
+    Countries
+  </div>
+  <div class="card-padding">
+    <mat-list>
+      <mat-list-item [class.selected]="selected === country" (click)="emitCountry(country)" *ngFor="let country of countries">
+        {{country.country}}
+      </mat-list-item>
+    </mat-list>
+  </div>
+</mat-card>

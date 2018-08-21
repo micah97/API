@@ -1,0 +1,5 @@
+<mat-grid-list cols="4" rowHeight="150px" gutterSize="5px">
+  <mat-grid-tile (click)="select.emit(team)" *ngFor="let team of teams">
+      <img [src]="team.crestUrl">
+    </mat-grid-tile>
+</mat-grid-list>

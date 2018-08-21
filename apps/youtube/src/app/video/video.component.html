@@ -1,0 +1,15 @@
+<div class="container">
+
+    <div class="cells cell-1">
+      <api-video-list [videos]="videos"
+                      (select)="selectVideo($event)">
+
+      </api-video-list>
+    </div>
+
+    <div class="cells cell-2">
+      <api-video-details [selectedVideo]="selectedVideo">
+
+      </api-video-details>
+    </div>
+</div>

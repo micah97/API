@@ -1,0 +1,32 @@
+@import '../sass/variables';
+
+mat-icon {
+  width: 60px;
+  height: 55px;
+  color: white;
+  font-size: 55px;
+}
+
+.icon {
+  width: 80px;
+  height: 55px;
+  display: flex;
+  margin-top: 29px;
+  margin-left: 10px;
+  border-radius: 15px;
+  justify-content: center;
+  background-color: $primary;
+}
+
+.header {
+  display: flex;
+  padding: 20px;
+}
+
+.h1 {
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  border-bottom: solid 2px $primary;
+}

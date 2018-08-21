@@ -1,0 +1,45 @@
+{
+  "npmScope": "API",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "star-wars": {
+      "tags": []
+    },
+    "pokemon": {
+      "tags": []
+    },
+    "oxford": {
+      "tags": []
+    },
+    "population": {
+      "tags": []
+    },
+    "rocket": {
+      "tags": []
+    },
+    "movie": {
+      "tags": []
+    },
+    "spotify": {
+      "tags": []
+    },
+    "soccer": {
+      "tags": []
+    },
+    "art": {
+      "tags": []
+    },
+    "youtube": {
+      "tags": []
+    },
+    "nba": {
+      "tags": []
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<mat-card *ngIf="selectedAlbum">
+    <div class="h2">{{selectedAlbum.name}}</div>
+    <hr>
+    <br>
+  <mat-list>
+    <a *ngFor="let song of album" target="_blank" [href]="song?.preview_url">
+      <mat-list-item>
+        <div class="mini-cell">
+          <button mat-mini-fab>{{song.track_number}}</button>
+        </div>
+        <div class="cell">{{song.name}}</div>
+        <div class="mini-cell play">
+          <mat-icon>play_arrow</mat-icon>
+        </div>
+      </mat-list-item>
+    </a>
+  </mat-list>
+  <div class="release">Released on: {{selectedAlbum.release_date}}</div>
+</mat-card>

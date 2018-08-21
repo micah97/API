@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300, 700|Oswald:700');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: -webkit-linear-gradient(150deg, whitesmoke 35%, hsl(0, 0%, 93%) 35%) no-repeat fixed;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  margin: 40px auto;
+  justify-content: space-around;
+}
+
+.cells {
+  width: 40%;
+  padding: 15px;
+}
+
+/*<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">*/
+

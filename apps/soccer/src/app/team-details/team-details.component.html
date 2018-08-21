@@ -1,0 +1,23 @@
+<mat-card *ngIf="selectedTeam">
+    <div style="display: flex;">
+      <div class="h2">{{selectedTeam.name}}</div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="mini-cell">No.</div>
+      <div class="cell">Name</div>
+      <div class="end-cell">Nationality</div>
+      <div class="end-cell">Position</div>
+    </div>
+  <mat-list>
+    <mat-list-item *ngFor="let player of roster">
+      <div class="mini-cell">
+        <button mat-mini-fab>{{player.jerseyNumber}}</button>
+      </div>
+      <div class="cell">{{player.name}}</div>
+      <div class="end-cell">{{player.nationality}}</div>
+      <div class="end-cell">{{player.position}}</div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>

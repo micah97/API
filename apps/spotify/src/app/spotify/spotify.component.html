@@ -1,0 +1,35 @@
+<div class="title-holder">
+  <div>
+    <div class="title">{{artist?.name}}</div>
+    <hr>
+  </div>
+</div>
+  <!-- <div class="search-holder">
+    <div class="card">
+      <mat-form-field>
+        <input (keyup.enter)="search(value)" autocomplete="off" matInput type="text" placeholder="Search" [(ngModel)]="value">
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+</div> -->
+
+<div *ngIf="artist" class="container">
+
+    <div class="cells cell-1">
+      <api-spotify-album [albums]="albums"
+                         (selectAlbum)="selectAlbum($event)">
+
+      </api-spotify-album>
+    </div>
+
+    <div class="cells cell-2">
+      <api-spotify-details [album]=album
+                           [selectedAlbum]="selectedAlbum">
+
+      </api-spotify-details>
+    </div>
+
+  </div>

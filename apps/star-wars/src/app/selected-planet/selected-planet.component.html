@@ -1,0 +1,12 @@
+<mat-card *ngIf="selectedPlanet">
+  <div class="card-header planet">{{selectedPlanet.name}}</div>
+
+  <div class="card-padding">
+
+    <div class="property-title">Climate: <span class="data">{{selectedPlanet.climate}}</span></div>
+    <div class="property-title">Terrain: <span class="data">{{selectedPlanet.terrain}}</span></div>
+    <div class="property-title">Population: <span class="data">{{selectedPlanet.population}}</span></div>
+
+  </div>
+
+</mat-card>

@@ -1,0 +1,13 @@
+.planet-name {
+  font-size: 20px;
+}
+
+mat-list-item:hover {
+  background-color: #595959;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #595959;
+  color: whitesmoke !important;
+}

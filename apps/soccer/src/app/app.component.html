@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="title">LA LIGA</div>
+  <hr>
+</div>
+
+<div class="container">
+
+  <div class="cells cell-1">
+    <api-team-list [teams]="teams"
+                   (select)="getTeamRoster($event)">
+
+    </api-team-list>
+  </div>
+
+  <div class="cells cell-2">
+    <api-team-details [roster]="roster"
+                      [selectedTeam]="selectedTeam">
+
+    </api-team-details>
+  </div>
+
+</div>

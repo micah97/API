@@ -1,0 +1,14 @@
+<mat-card>
+  <div class="card-header">PLANETS</div>
+
+  <div class="card-padding">
+
+    <mat-list>
+      <mat-list-item [class.selected]="planet === selectedPlanet" *ngFor="let planet of planets" (click)="selectPlanet(planet)">
+        <div class="planet-name">{{planet.name}}</div>
+      </mat-list-item>
+    </mat-list>
+
+  </div>
+
+</mat-card>

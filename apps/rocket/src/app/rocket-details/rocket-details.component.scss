@@ -1,0 +1,27 @@
+mat-form-field {
+  width: 40%;
+}
+
+button {
+  background-color: #D7263D;
+  color: white;
+}
+
+.btn-holder {
+  display: flex;
+  padding-right: 20px;
+  justify-content: flex-end;
+  .clear {
+    margin-right: 10px;
+  }
+}
+
+.holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.country {
+  font-size: 15px;
+}

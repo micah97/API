@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-header>
+        <div class="card-header mat-elevation-z5">
+          <mat-icon>star</mat-icon>
+        </div>
+    </mat-card-header>
+    <mat-list>
+        <mat-list-item (click)="emitPlayer(player)" *ngFor="let player of players"> <!-- [class.selected]="selected === item"-->
+          {{player.name}}
+        </mat-list-item>
+      </mat-list>
+</mat-card>

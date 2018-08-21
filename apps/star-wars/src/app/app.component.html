@@ -1,0 +1,17 @@
+<div class="header">API WARS</div>
+
+<div class="container">
+
+  <div class="section">
+    <app-planet-list
+      [planets]="planets"
+      (select)="selectPlanet($event)"
+    ></app-planet-list>
+  </div>
+
+  <div class="section right">
+    <app-selected-planet [selectedPlanet]="selectedPlanet">
+    </app-selected-planet>
+  </div>
+
+</div>

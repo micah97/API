@@ -1,0 +1,18 @@
+mat-grid-tile {
+  height: 150px;
+  border-radius: 15px;
+  background-color: white;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+mat-grid-tile:hover {
+  z-index: 100;
+  cursor: pointer;
+  transition: 0.25s;
+  transform: scale(1.05);
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}

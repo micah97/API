@@ -1,0 +1,19 @@
+mat-card {
+  padding: 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+.card-padding {
+  padding: 20px;
+}
+
+.card-header {
+  font-size: 27px;
+  color: white;
+  background-color: #084C61;
+  padding: 20px 20px 10px 20px;
+  border-radius: 2px;
+  border-bottom: 2px solid #F95738;
+  text-transform: uppercase;
+}

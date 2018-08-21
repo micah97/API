@@ -1,0 +1,13 @@
+<mat-card class="card">
+    <div class="card-header">
+      Micah's Playlist
+    </div>
+    <div class="card-padding">
+      <mat-list>
+        <mat-list-item (click)="select.emit(video)" *ngFor="let video of videos"> <!-- [class.selected]="selected === item"-->
+          <img [src]="video.snippet.thumbnails.high.url">
+          <div class="title">{{video.snippet.title}}</div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-card>

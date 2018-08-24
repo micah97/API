@@ -1,12 +1,17 @@
 <mat-card>
     <mat-card-header>
-        <div class="card-header mat-elevation-z5">
-          <mat-icon>star</mat-icon>
-        </div>
+      <div class="card-header mat-elevation-z5">
+        <mat-icon>star</mat-icon>
+      </div>
     </mat-card-header>
+    <div class="position">POSITION</div>
     <mat-list>
-        <mat-list-item (click)="emitPlayer(player)" *ngFor="let player of players"> <!-- [class.selected]="selected === item"-->
-          {{player.name}}
+        <mat-list-item [class.selected]="player === selectedPlayer" (click)="selectPlayer(player)" *ngFor="let player of players">
+          <div class="name">{{player.name}}</div>
+          <span></span>
+          <div class="number">
+            {{player.position}}
+          </div>
         </mat-list-item>
       </mat-list>
 </mat-card>

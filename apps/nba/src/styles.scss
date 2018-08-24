@@ -1,3 +1,5 @@
+@import "sass/variables";
+@import 'sass/custom-theme.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300|Oswald:700');
 
 * {
@@ -12,7 +14,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background: no-repeat fixed linear-gradient(70deg, hsl(0, 0%, 91%)  30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, hsl(0, 0%, 93%) 60%, whitesmoke 60%);
+  background: no-repeat fixed linear-gradient(70deg, hsl(0, 0%, 90%)  30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, hsl(0, 0%, 92%) 60%, hsl(0, 0%, 93%) 60%);
 }
 
 mat-card {
@@ -22,11 +24,20 @@ mat-card {
 .container {
   width: 80%;
   display: flex;
-  margin: 80px auto;
+  margin: 80px auto auto;
   justify-content: space-around;
 }
 
 .cells {
   width: 40%;
   padding: 15px;
+}
+
+.card-header {
+  padding: 15px;
+  margin-top: -50px;
+  margin-right: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4);
+  background-image: linear-gradient(45deg, #F56B18, #F56B18, #F67A2F, #F78946, #F78946);
 }

@@ -1,11 +1,11 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NbaService } from './nba.service';
-import { AppMaterialModule } from 'libs/app-material.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
 import { NxModule } from '@nrwl/nx';
+import { NgModule } from '@angular/core';
+import { NbaService } from './nba.service';
+import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppMaterialModule } from '../../../../libs/app-material.module';
 import { PlayersListComponent } from './players-list/players-list.component';
 import { PlayersDetailsComponent } from './players-details/players-details.component';
 
@@ -19,6 +19,7 @@ import { PlayersDetailsComponent } from './players-details/players-details.compo
     BrowserModule,
     HttpClientModule,
     AppMaterialModule,
+    ReactiveFormsModule,
     NxModule.forRoot()
   ],
   providers: [NbaService],

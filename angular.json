@@ -1018,6 +1018,190 @@
           }
         }
       }
+    },
+    "music": {
+      "root": "apps/music/",
+      "sourceRoot": "apps/music/src",
+      "projectType": "application",
+      "prefix": "API",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/music",
+            "index": "apps/music/src/index.html",
+            "main": "apps/music/src/main.ts",
+            "polyfills": "apps/music/src/polyfills.ts",
+            "tsConfig": "apps/music/tsconfig.app.json",
+            "assets": [
+              "apps/music/src/favicon.ico",
+              "apps/music/src/assets"
+            ],
+            "styles": [
+              "apps/music/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/music/src/environments/environment.ts",
+                  "with": "apps/music/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "music:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "music:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "music:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/music/src/test.ts",
+            "polyfills": "apps/music/src/polyfills.ts",
+            "tsConfig": "apps/music/tsconfig.spec.json",
+            "karmaConfig": "apps/music/karma.conf.js",
+            "styles": [
+              "apps/music/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/music/src/favicon.ico",
+              "apps/music/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/music/tsconfig.app.json",
+              "apps/music/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "air": {
+      "root": "apps/air/",
+      "sourceRoot": "apps/air/src",
+      "projectType": "application",
+      "prefix": "API",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/air",
+            "index": "apps/air/src/index.html",
+            "main": "apps/air/src/main.ts",
+            "polyfills": "apps/air/src/polyfills.ts",
+            "tsConfig": "apps/air/tsconfig.app.json",
+            "assets": [
+              "apps/air/src/favicon.ico",
+              "apps/air/src/assets"
+            ],
+            "styles": [
+              "apps/air/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/air/src/environments/environment.ts",
+                  "with": "apps/air/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "air:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "air:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "air:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/air/src/test.ts",
+            "polyfills": "apps/air/src/polyfills.ts",
+            "tsConfig": "apps/air/tsconfig.spec.json",
+            "karmaConfig": "apps/air/karma.conf.js",
+            "styles": [
+              "apps/air/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/air/src/favicon.ico",
+              "apps/air/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/air/tsconfig.app.json",
+              "apps/air/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

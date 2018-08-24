@@ -1,0 +1,43 @@
+@import '../../sass/variables';
+
+mat-list {
+  margin-top: 25px;
+  overflow: scroll;
+  max-height: 500px;
+}
+
+mat-list-item {
+  border-radius: 20px;
+}
+
+mat-list-item:hover {
+  cursor: pointer;
+  background-color: hsl(60, 3%, 18%);
+}
+
+mat-icon {
+  width: 55px;
+  height: 55px;
+  font-size: 55px;
+}
+
+.icon {
+  right: 25px;
+  padding: 15px;
+  margin-top: -70px;
+  position: absolute;
+  border-radius: 20px;
+  background-color: $accent2;
+}
+
+.name {
+  font-size: 20px;
+}
+
+.selected {
+  background-color: $primary;
+}
+
+.selected:hover {
+  background-color: $primary;
+}

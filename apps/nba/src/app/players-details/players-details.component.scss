@@ -1,13 +1,64 @@
-mat-card-header {
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #F56B18;
-  margin-top: -50px !important;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+mat-card {
+  height: 250px;
 }
 
-mat-card-title {
-  color: white;
+mat-card * {
+  color: #a6a6a6;
+}
+
+form {
+  margin: 60px auto auto;
+  width: 75%;
+}
+
+mat-icon {
+  width: 50px;
+  height: 50px;
+  color: white !important;
+  font-size: 50px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+.submit {
+  color: white !important;
+}
+
+.btn-group {
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+}
+
+.h1 {
+  top: 10px;
+  left: 15px;
   font-size: 30px;
-  margin-bottom: 0 !important;
+  position: absolute;
+  color: hsl(0, 0%, 93%);
+  font-family: 'Oswald', sans-serif;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.big {
+  width: 75%;
+}
+
+.half {
+  width: 50%;
+}
+
+.mini {
+  width: 20%;
+}
+
+.card-header {
+  right: 15px;
+  position: absolute;
 }

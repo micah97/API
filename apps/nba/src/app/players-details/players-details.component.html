@@ -1,8 +1,45 @@
 <mat-card>
-    <mat-card-header>
-        <mat-card-title>Selected Player</mat-card-title>
-    </mat-card-header>
+  <mat-card-header>
+      <div class="h1">{{selectedPlayer?.name}}</div>
+      <div class="card-header mat-elevation-z5">
+        <mat-icon>person</mat-icon>
+      </div>
+      </mat-card-header>
 
-    <h1>HOLA</h1>
+      <form [formGroup]="group" autocomplete="off" (submit)="save(group.value)">
+        <div class="row">
+            <mat-form-field class="half">
+              <input matInput type="text" name="name" placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field class="mini">
+              <input matInput type="number" name="number" placeholder="No." formControlName="number">
+            </mat-form-field>
+            <mat-form-field class="mini">
+              <input matInput type="text" name="height" placeholder="Height" formControlName="height">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="mini">
+              <mat-select formControlName="position" placeholder="Position">
+                <mat-option *ngFor="let pos of positions" [value]="pos.name">
+                  {{pos.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="big">
+              <mat-select formControlName="team" placeholder="Team">
+                <mat-option *ngFor="let team of teams" [value]="team.name">
+                  {{team.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+        </div>
+        <div class="btn-group">
+            <button mat-button type="button" (click)="delete(selectedPlayer)">Delete</button>
+            <button mat-button type="reset" (click)="cancel()">Cancel</button>
+            <button class="submit" type="submit" mat-raised-button color="accent">Create</button>
+        </div>
+      </form>
 
 </mat-card>

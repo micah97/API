@@ -6,6 +6,8 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./players-list.component.scss']
 })
 export class PlayersListComponent implements OnInit {
+  player;
+  selectedPlayer;
 
   @Input() players: any;
   @Output() select = new EventEmitter;
@@ -15,8 +17,8 @@ export class PlayersListComponent implements OnInit {
   ngOnInit() {
   }
 
-// selectPlanet(planet) {
-    // this.select.emit(planet);
-    // this.selectedPlanet = planet;
-  // }
+  selectPlayer(player) {
+    this.select.emit(player);
+    this.selectedPlayer = player;
+  }
 }

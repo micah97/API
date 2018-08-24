@@ -1,0 +1,12 @@
+<mat-card class="animated fadeInLeft" *ngIf="selectedCountry">
+  <div class="card-header">
+    {{selectedCountry.name}}
+    <mat-icon class="close" (click)="deselect()">clear</mat-icon>
+  </div>
+
+  <div class="card-padding">
+    <mat-icon class="icon">location_city</mat-icon>
+    <div class="apparently">Apparently {{selectedCountry.name}} only has {{selectedCountry.cities}} {{selectedCountry.cities < 2 ? 'city' : 'cities'}}..</div>
+    <div class="statement">But it has {{selectedCountry.locations}} great {{selectedCountry.locations < 2 ? 'location' : 'locations'}}!</div>
+  </div>
+</mat-card>

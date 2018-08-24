@@ -1,12 +1,19 @@
 <div class="container">
     <div class="cells cell-1">
-      <api-players-list [players]="players">
+      <api-players-list [players]="players"
+                        (select)="selectPlayer($event)">
 
       </api-players-list>
     </div>
 
     <div class="cells cell-2">
-      <api-players-details>
+      <api-players-details [teams]="teams"
+                           [positions]="positions"
+                           [selectedPlayer]="selectedPlayer"
+                           [group]="form"
+                           (cancelled)="cancel($event)"
+                           (deleted)="delete($event)"
+                           (saved)="save($event)">
 
       </api-players-details>
     </div>

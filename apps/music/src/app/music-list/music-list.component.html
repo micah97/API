@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-header>
+        <div class="icon">
+            <mat-icon>music_note</mat-icon>
+          </div>
+
+    </mat-card-header>
+    <mat-list>
+        <mat-list-item [class.selected]="inst === selectedInst" (click)="emitInstrument(inst)" *ngFor="let inst of instruments">
+          <div class="name">
+            {{inst.name}}
+          </div>
+        </mat-list-item>
+      </mat-list>
+</mat-card>

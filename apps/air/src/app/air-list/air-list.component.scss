@@ -1,0 +1,30 @@
+mat-grid-list {
+  overflow: scroll;
+  max-height: 775px;
+}
+
+mat-grid-tile {
+  color: #22272E;
+  width: 150px !important;
+  background-color: white;
+  transition: box-shadow .3s;
+}
+
+mat-grid-tile:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+span {
+  font-size: 20px;
+}
+
+.selected {
+  background-color: rgb(247, 59, 21);
+  color: white !important;
+}
+
+.selected:hover {
+  background-color: #F95738;
+}

@@ -1,0 +1,27 @@
+<div class="h1">{{selectedInst?.id ? selectedInst.name : 'CREATE'}}</div>
+
+<mat-card>
+  <form autocomplete="off" [formGroup]="group" (submit)="save(group.value)">
+    <div class="row">
+      <mat-form-field  color="primary" class="half">
+        <input matInput type="text" name="name" placeholder="Name" formControlName="name">
+      </mat-form-field>
+      <mat-form-field class="half">
+        <input matInput type="text" name="country" placeholder="Country" formControlName="country">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="half">
+        <input matInput type="text" name="date" placeholder="Date" formControlName="year">
+      </mat-form-field>
+      <mat-form-field class="half">
+        <input matInput type="text" name="inventor" placeholder="Inventor" formControlName="inventor">
+      </mat-form-field>
+    </div>
+    <div class="btn-group">
+      <button class="delete" type="button" (click)="delete(selectedInst)" mat-button><span>DELETE</span></button>
+      <button class="cancel" type="reset" (click)="cancel()" mat-button><span>CANCEL</span></button>
+      <button class="create" type="submit" mat-button><span>{{selectedInst?.id ? 'UPDATE' : 'CREATE'}}</span></button>
+    </div>
+  </form>
+</mat-card>

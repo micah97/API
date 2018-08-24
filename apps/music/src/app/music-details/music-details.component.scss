@@ -1,0 +1,90 @@
+@import '../../sass/variables';
+
+mat-card {
+  margin-top: -10px;
+}
+
+form {
+  margin: 40px auto !important;
+  width: 75%;
+}
+
+input {
+  color: $color !important;
+}
+
+button {
+  margin-left: 15px;
+  border-radius: 20px;
+  background-color: $dark;
+}
+
+.delete {
+  border: solid 2px $accent2;
+  span {
+    color: $accent2;
+  }
+}
+
+.delete:hover {
+  border: none;
+  background-color: $accent2;
+  span {
+    color: white;
+  }
+}
+
+.cancel {
+  border: solid 2px $primary;
+  span {
+    color: $primary;
+  }
+}
+
+.cancel:hover {
+  border: none;
+  background-color: $primary;
+  span {
+    color: white;
+  }
+}
+
+.create {
+  border: solid 2px $accent1;
+  span {
+    color: $accent1;
+  }
+}
+
+.create:hover {
+  border: none;
+  background-color: $accent1;
+  span {
+    color: white;
+  }
+}
+
+.h1 {
+  font-size: 60px;
+  margin-top: -62px;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-group {
+  right: 20px;
+  margin-top: 45px;
+  position: absolute;
+}
+
+::ng-deep .mat-form-field-label {
+  color: $color !important;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: $color;
+}

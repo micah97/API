@@ -1,0 +1,25 @@
+<div class="header">
+  <small>The history of</small>
+  <div class="h1">INSTRUMENTS</div>
+</div>
+
+  <div class="container">
+
+    <div class="cells cell-1">
+      <api-music-list [instruments]="instruments"
+                      (selected)="selectInst($event)">
+
+      </api-music-list>
+    </div>
+
+    <div class="cells cell-2">
+      <api-music-details [selectedInst]="selectedInst"
+                         [group]="form"
+                         (saved)="save($event)"
+                         (deleted)="delete($event)"
+                         (cancelled)="cancel($event)">
+
+      </api-music-details>
+    </div>
+
+  </div>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from './spotify.service';
 
 @Component({
-  selector: 'API-spotify',
+  selector: 'api-spotify',
   templateUrl: './spotify.component.html',
   styleUrls: ['./spotify.component.scss']
 })

@@ -1,0 +1,45 @@
+@import 'sass/variables';
+@import 'sass/custom-theme';
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,800');
+
+* {
+  color: $color;
+  font-weight: 100;
+  font-family: 'Exo 2', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: no-repeat fixed linear-gradient(110deg, $dark 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, hsl(60, 3%, 15%) 70%, hsl(60, 2%, 10%) 70%);
+}
+
+mat-card {
+  border: solid 2px $color;
+  border-radius: 5px !important;
+  background-color: $dark !important;
+}
+
+button {
+  border-radius: 20px;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  margin: 40px auto;
+  justify-content: space-around;
+}
+
+.cells {
+  width: 40%;
+  padding: 15px;
+}
+
+.h1 {
+  font-weight: 800;
+}

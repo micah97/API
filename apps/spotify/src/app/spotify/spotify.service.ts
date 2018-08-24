@@ -13,16 +13,16 @@ export class SpotifyService {
 
   constructor(private http: HttpClient) { }
 
-  // getArtist() {
-  //   return this.http.get(this.url + 'artists/7ENzCHnmJUr20nUjoZ0zZ1');
-  // }
+  getArtist() {
+    return this.http.get(this.url + 'artists/7ENzCHnmJUr20nUjoZ0zZ1');
+  }
 
-  // getArtistAlbums() {
-  //   return this.http.get(this.url + 'artists/7ENzCHnmJUr20nUjoZ0zZ1/albums');
-  // }
+  getArtistAlbums() {
+    return this.http.get(this.url + 'artists/7ENzCHnmJUr20nUjoZ0zZ1/albums');
+  }
 
-  // getAlbumTracks(albumId) {
-  //   return this.http.get(this.url + 'albums/' + albumId + '/tracks')
-  // }
+  getAlbumTracks(albumId) {
+    return this.http.get(this.url + 'albums/' + albumId + '/tracks')
+  }
 
 }

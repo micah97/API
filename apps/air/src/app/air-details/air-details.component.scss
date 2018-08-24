@@ -1,0 +1,56 @@
+mat-card {
+  padding: 0;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  height: 300px;
+  z-index: 9001;
+  position: absolute;
+  background-color: white;
+}
+
+.icon {
+  left: 5px;
+  bottom: 100px;
+  color: #f2f2f2;
+  font-size: 130px;
+  position: absolute;
+}
+
+.card-header {
+  display: flex;
+  font-size: 27px;
+  color: #22272E;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 20px 20px 10px 20px;
+  font-family: 'Exo', sans-serif;
+  justify-content: space-between;
+  border-bottom: 2px solid #F95738;
+}
+
+.card-padding {
+  font-size: 20px;
+  padding: 20px 20px 0;
+}
+
+.apparently {
+  padding-top: 50px;
+}
+
+.statement {
+  right: 15px;
+  bottom: 15px;
+  position: absolute;
+}
+
+.close {
+  margin-top: 5px;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: #F2F2F2;
+  border-radius: 25px;
+  background-color: #c2c2c2;
+}

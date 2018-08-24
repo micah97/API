@@ -4,8 +4,8 @@ import { NxModule } from '@nrwl/nx';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppMaterialModule } from 'libs/app-material.module';
 import { TeamListComponent } from './team-list/team-list.component';
+import { AppMaterialModule } from '../../../../libs/app-material.module';
 import { TeamDetailsComponent } from './team-details/team-details.component';
 
 @NgModule({

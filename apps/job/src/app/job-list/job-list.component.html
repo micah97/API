@@ -1,0 +1,17 @@
+<mat-card>
+    <div class="view">
+
+      <div class="title">
+        <strong>UNUSUAL JOBS</strong>
+        <mat-icon>work</mat-icon>
+      </div>
+
+    </div>
+    <div class="card-padding">
+      <mat-list>
+        <mat-list-item [class.selected]="selectedJob === job" (click)="emitJob(job)" *ngFor="let job of jobs">
+          {{job.title}}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-card>

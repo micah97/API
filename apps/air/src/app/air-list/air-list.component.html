@@ -1,3 +1,3 @@
-<mat-grid-list class="animated fadeIn" cols="6" rowHeight="150px" gutterSize="5px">
+<mat-grid-list class="animated fadeIn" cols="6" (window:resize)="onResize($event)" rowHeight="1:1" gutterSize="5px">
   <mat-grid-tile [class.selected]="country === selectedCountry" (click)="selectCountry(country)" *ngFor="let country of countries"><span>{{country.code}}</span></mat-grid-tile>
 </mat-grid-list>

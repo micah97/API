@@ -1,0 +1,18 @@
+<mat-card *ngIf="selectedJob">
+  <div class="header">
+    <div class="h1">{{selectedJob.title}}</div>
+
+    <button mat-stroked-button (click)="deselect()">CLOSE</button>
+  </div>
+
+  <h4>DESCRIPTION:</h4>
+  <div class="desc">{{selectedJob.description}}</div>
+
+  <h1>RELATED JOBS</h1>
+  <hr>
+  <mat-list>
+    <mat-list-item *ngFor="let job of relatedJobs">
+      {{job.title}}
+    </mat-list-item>
+  </mat-list>
+</mat-card>

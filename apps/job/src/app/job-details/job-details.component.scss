@@ -1,0 +1,56 @@
+@import '../../sass/variables';
+
+mat-card {
+  color: gray;
+}
+
+mat-list {
+  width: 100%;
+  overflow: scroll;
+  max-height: 150px;
+}
+
+mat-list-item {
+  transition: box-shadow .2s;
+}
+
+mat-list-item:hover {
+  cursor: pointer;
+  border-right: solid 2px $primary;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+button {
+  float: right;
+  color: $primary;
+  border-color: $primary;
+}
+
+hr {
+  width: 30%;
+  float: left;
+  border: solid 1px $primary;
+}
+
+h1 {
+  color: gray;
+  margin: 50px 0 0;
+}
+
+h4 {
+  margin-top: 75px;
+}
+
+.h1 {
+  left: -10px;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  max-width: 400px;
+  position: absolute;
+  border-radius: 5px;
+  text-transform: capitalize;
+  margin-top: -50px !important;
+  background-image: linear-gradient(45deg, $primary, #34C464, #48CA73);
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4);
+}

@@ -1,0 +1,44 @@
+@import '../../sass/variables';
+
+mat-list {
+  overflow: scroll;
+  margin-top: 15px;
+  max-height: 500px;
+}
+
+mat-list-item {
+  color: gray;
+  text-transform: uppercase;
+  transition: box-shadow .2s;
+  border-bottom: solid 1px #e6e6e6;
+}
+
+mat-list-item:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+mat-icon {
+  float: right;
+  font-size: 40px;
+  margin-right: 15px;
+}
+
+.selected {
+  border-left: solid 3px $primary;
+}
+
+.view {
+  left: 20px;
+  right: 20px;
+  padding: 15px;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  border-radius: 5px;
+  font-weight: 700 !important;
+  margin-top: -50px !important;
+  background-image: linear-gradient(45deg, $primary, #34C464, #48CA73);
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4);
+}

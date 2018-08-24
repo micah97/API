@@ -1,11 +1,12 @@
 mat-grid-list {
+  margin: auto;
   overflow: scroll;
   max-height: 775px;
+  max-width: 1000px;
 }
 
 mat-grid-tile {
   color: #22272E;
-  width: 150px !important;
   background-color: white;
   transition: box-shadow .3s;
 }

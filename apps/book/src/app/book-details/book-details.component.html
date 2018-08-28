@@ -1,0 +1,20 @@
+<div *ngIf="!books" class="h1">Search for any book!</div>
+
+<mat-card *ngIf="books">
+  <div class="mat-grid-list">
+    <div class="mat-grid-tile" *ngFor="let book of books">
+      <img [src]="book?.volumeInfo.imageLinks?.smallThumbnail">
+      <div class="info">
+        <div class="h3">{{book?.volumeInfo.title}}</div>
+        <hr>
+        <br>
+        <div class="author">
+          <h4 *ngFor="let auth of book.volumeInfo.authors; let l = last;">
+            {{auth}} <span *ngIf="!l">, </span>
+          </h4>
+        </div>
+        <p>{{book?.volumeInfo.description}}</p>
+      </div>
+    </div>
+  </div>
+</mat-card>

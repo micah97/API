@@ -1,0 +1,18 @@
+<div class="card">
+    <mat-form-field>
+      <input (keyup.enter)="search.emit(value)" autocomplete="off" matInput type="text" placeholder="Search" [(ngModel)]="value">
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <!-- .card {
+    width: 100%;
+    display: flex;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  } -->

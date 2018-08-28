@@ -1,25 +1,24 @@
 <div class="header">
-    <i class="fas fa-rocket"></i>
+  <div class="h1">COMIC</div>
+  <i class="fab fa-pushed"></i>
 </div>
 
 <div class="container">
 
-  <div class="cells cell-1">
-    <api-rocket-list [rockets]="rockets"
-                     (selectRocket)="selectRocket($event)">
+    <div class="cells">
+      <api-comic-search (random)="randomComic($event)"
+                        (search)="searchComic($event)">
 
-    </api-rocket-list>
+      </api-comic-search>
+    </div>
+
+    <div class="cells">
+      <api-comic-details [comic]="comic">
+
+      </api-comic-details>
+    </div>
+
   </div>
-
-  <div class="cells cell-2">
-    <api-rocket-details [selectedRocket]="selectedRocket"
-                        [group]="form"
-                        (cancelled)="resetForm($event)">
-
-    </api-rocket-details>
-  </div>
-
-</div>
 
 <footer>
   <hr class="footer-hr">

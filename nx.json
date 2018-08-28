@@ -49,6 +49,15 @@
     },
     "job": {
       "tags": []
+    },
+    "comic": {
+      "tags": []
+    },
+    "book": {
+      "tags": []
+    },
+    "book-e2e": {
+      "tags": []
     }
   }
 }

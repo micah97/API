@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
 
   resetForm() {
     this.form.reset();
-    this.selectedRocket = { } as any;
+    this.selectedRocket = false;
   }
 
   initForm() {

@@ -395,7 +395,7 @@
               "apps/rocket/src/assets"
             ],
             "styles": [
-              "apps/rocket/src/styles.css"
+              "apps/rocket/src/styles.scss"
             ],
             "scripts": []
           },
@@ -444,7 +444,7 @@
             "tsConfig": "apps/rocket/tsconfig.spec.json",
             "karmaConfig": "apps/rocket/karma.conf.js",
             "styles": [
-              "apps/rocket/src/styles.css"
+              "apps/rocket/src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -1287,6 +1287,190 @@
             "tsConfig": [
               "apps/job/tsconfig.app.json",
               "apps/job/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "comic": {
+      "root": "apps/comic/",
+      "sourceRoot": "apps/comic/src",
+      "projectType": "application",
+      "prefix": "API",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/comic",
+            "index": "apps/comic/src/index.html",
+            "main": "apps/comic/src/main.ts",
+            "polyfills": "apps/comic/src/polyfills.ts",
+            "tsConfig": "apps/comic/tsconfig.app.json",
+            "assets": [
+              "apps/comic/src/favicon.ico",
+              "apps/comic/src/assets"
+            ],
+            "styles": [
+              "apps/comic/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/comic/src/environments/environment.ts",
+                  "with": "apps/comic/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "comic:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "comic:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "comic:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/comic/src/test.ts",
+            "polyfills": "apps/comic/src/polyfills.ts",
+            "tsConfig": "apps/comic/tsconfig.spec.json",
+            "karmaConfig": "apps/comic/karma.conf.js",
+            "styles": [
+              "apps/comic/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/comic/src/favicon.ico",
+              "apps/comic/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/comic/tsconfig.app.json",
+              "apps/comic/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "book": {
+      "root": "apps/book/",
+      "sourceRoot": "apps/book/src",
+      "projectType": "application",
+      "prefix": "API",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/book",
+            "index": "apps/book/src/index.html",
+            "main": "apps/book/src/main.ts",
+            "polyfills": "apps/book/src/polyfills.ts",
+            "tsConfig": "apps/book/tsconfig.app.json",
+            "assets": [
+              "apps/book/src/favicon.ico",
+              "apps/book/src/assets"
+            ],
+            "styles": [
+              "apps/book/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/book/src/environments/environment.ts",
+                  "with": "apps/book/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "book:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "book:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "book:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/book/src/test.ts",
+            "polyfills": "apps/book/src/polyfills.ts",
+            "tsConfig": "apps/book/tsconfig.spec.json",
+            "karmaConfig": "apps/book/karma.conf.js",
+            "styles": [
+              "apps/book/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/book/src/favicon.ico",
+              "apps/book/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/book/tsconfig.app.json",
+              "apps/book/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

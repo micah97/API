@@ -1,0 +1,9 @@
+<mat-card *ngIf="comic">
+  <div>
+    <img [src]="comic.img" [alt]="comic.alt">
+
+    <div class="desc">
+      {{comic.alt}}
+    </div>
+  </div>
+</mat-card>

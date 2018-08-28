@@ -14,11 +14,21 @@ export class RocketDetailsComponent implements OnInit {
   @Input() set rocket(value) {
     this.selectedRocket = Object.assign({}, value);
   }
-  @Output() reset = new EventEmitter;
+  @Output() cancelled = new EventEmitter;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  reset() {
+    this.group.reset();
+    this.selectedRocket = { } as any;
+  }
+
+  cancel() {
+    this.reset();
+    this.cancelled.emit();
   }
 
   submit(group) {

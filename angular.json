@@ -1478,6 +1478,98 @@
           }
         }
       }
+    },
+    "dog": {
+      "root": "apps/dog/",
+      "sourceRoot": "apps/dog/src",
+      "projectType": "application",
+      "prefix": "API",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/dog",
+            "index": "apps/dog/src/index.html",
+            "main": "apps/dog/src/main.ts",
+            "polyfills": "apps/dog/src/polyfills.ts",
+            "tsConfig": "apps/dog/tsconfig.app.json",
+            "assets": [
+              "apps/dog/src/favicon.ico",
+              "apps/dog/src/assets"
+            ],
+            "styles": [
+              "apps/dog/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/dog/src/environments/environment.ts",
+                  "with": "apps/dog/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "dog:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "dog:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "dog:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/dog/src/test.ts",
+            "polyfills": "apps/dog/src/polyfills.ts",
+            "tsConfig": "apps/dog/tsconfig.spec.json",
+            "karmaConfig": "apps/dog/karma.conf.js",
+            "styles": [
+              "apps/dog/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/dog/src/favicon.ico",
+              "apps/dog/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/dog/tsconfig.app.json",
+              "apps/dog/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

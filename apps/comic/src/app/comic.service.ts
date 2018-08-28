@@ -11,10 +11,7 @@ export class ComicService {
 
   private buildHeaders() {
     const headers = new HttpHeaders();
-    headers.append(
-      'Access-Control-Allow-Origin',
-      'https://comics-api.surge.sh'
-    );
+    headers.append('Access-Control-Allow-Origin', 'https://comics-api.surge.sh');
     headers.append('Access-Control-Allow-Origin', 'localhost:4200');
     return headers;
   }

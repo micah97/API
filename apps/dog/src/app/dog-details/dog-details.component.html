@@ -1,0 +1,31 @@
+<mat-card *ngIf="selectedDog">
+
+  <i class="fas fa-paw paw"></i>
+
+  <h1>
+    {{selectedDog.name}}
+  </h1>
+  <hr>
+  <br>
+
+  <!-- <div class="row"> -->
+    <h3>Life Span:</h3>
+    <p>{{selectedDog.life_span}}</p>
+  <!-- </div> -->
+
+  <!-- <div class="row"> -->
+    <h3>Temperament:</h3>
+    <p>{{selectedDog.temperament}}</p>
+  <!-- </div> -->
+
+  <div class="row">
+    <div class="fifty">
+      <h3>Height:</h3>
+      <p>{{selectedDog.height.imperial}}</p>
+    </div>
+    <div class="fifty">
+      <h3>Weight:</h3>
+      <p>{{selectedDog.weight.imperial}}</p>
+    </div>
+  </div>
+</mat-card>

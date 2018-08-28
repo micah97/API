@@ -1,0 +1,13 @@
+<mat-card>
+    <div class="card-header">
+      DOGS
+      <i class="fas fa-paw big-paw"></i>
+    </div>
+    <div class="card-padding">
+      <mat-list>
+        <mat-list-item [class.selected]="selectedDog === dog" (click)="selectDog(dog)" *ngFor="let dog of dogs">
+          {{dog.name}}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-card>

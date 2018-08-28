@@ -1,0 +1,21 @@
+mat-list {
+  overflow: scroll;
+  max-height: 500px;
+}
+
+mat-list-item:hover {
+  cursor: pointer;
+  background-color: #F2F4F3;
+}
+
+.card-header {
+  font-size: 35px;
+}
+
+.selected {
+  border-left: solid 3px #39677C;
+}
+
+.big-paw {
+  color: #39677C;
+}

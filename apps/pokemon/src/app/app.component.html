@@ -1,4 +1,5 @@
 <div class="container">
+
   <div class="cells">
     <api-pokemon-list [pokemon]="pokemon"
                       (selectPoke)="selectPoke($event)">
@@ -7,8 +8,36 @@
 
   <div class="cells">
     <api-pokemon-details [selectedPokemon]="selectedPokemon"
+                         [isLoading]="isLoading"
                          [group]="form"
-                         (resetForm)="reset($event)">
+                         (cancelled)="reset($event)">
     </api-pokemon-details>
   </div>
 </div>
+
+<footer>
+  <hr class="footer-hr">
+  <div class="btn-group">
+
+    <a target="_blank" href="https://www.linkedin.com/in/micah-torres-794558129/">
+      <button mat-mini-fab ><i class="fa fa-linkedin"></i></button>
+    </a>
+
+    <a target="_blank" href="https://www.instagram.com/_____micah/">
+      <button mat-mini-fab><i class="fa fa-instagram"></i></button>
+    </a>
+
+    <a target="_blank" href="http://youtube-playlist-micah.surge.sh/">
+      <button mat-mini-fab><i class="fa fa-youtube"></i></button>
+    </a>
+
+    <a target="_blank" href="https://github.com/micah97/API">
+      <button mat-mini-fab><i class="fa fa-github"></i></button>
+    </a>
+
+    <a href="mailto:micahtorres13@gmail.com">
+      <button mat-mini-fab><i class="fa fa-envelope"></i></button>
+    </a>
+
+  </div>
+</footer>

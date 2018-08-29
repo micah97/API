@@ -14,9 +14,6 @@ export class PokemonService {
   }
 
   getPoke(url) {
-    return this.http.get<any>(url)
-      .pipe(
-        map(res => res)
-      );
+    return this.http.get<any>(url);
   }
 }

@@ -10,34 +10,34 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 @Component({
   selector: 'api-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   providers: [PokemonService]
 })
 export class AppComponent implements OnInit {
-  pokemon: Pokemon[];
-  selectedPokemon: Pokemon;
+  pokemon;
+  isLoading;
+  selectedPokemon;
   form: FormGroup;
 
   constructor(private pokemonService: PokemonService,
-              private fb: FormBuilder
-  ) {}
+              private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.getPokemon();
     this.initForm();
+    this.getPokemon();
   }
 
   getPokemon() {
     this.pokemonService.getPokemon()
       .subscribe(pokemon => {
         this.pokemon = pokemon.results;
-        console.log(pokemon);
       });
   }
 
   selectPoke(selectedPoke) {
-    this.selectedPokemon = selectedPoke;
+    this.isLoading = true;
     this.getPoke(selectedPoke);
+    this.selectedPokemon = selectedPoke;
   }
 
   getPoke(poke) {
@@ -45,12 +45,13 @@ export class AppComponent implements OnInit {
       .subscribe(res => {
         this.selectedPokemon = res;
         this.form.patchValue(this.selectedPokemon);
+        this.isLoading = false;
       })
   }
 
   reset() {
     this.form.reset();
-    this.selectedPokemon = { } as any;
+    this.selectedPokemon = false;
   }
 
   initForm() {

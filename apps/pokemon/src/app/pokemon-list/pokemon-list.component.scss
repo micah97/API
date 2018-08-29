@@ -1,0 +1,33 @@
+mat-list {
+  overflow: scroll;
+  margin-top: 20px;
+  max-height: 500px;
+}
+
+mat-list-item {
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+mat-list-item:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+span {
+  font-size: 16px;
+}
+
+.block {
+  margin-left: -10px;
+}
+
+.h1 {
+  color: white;
+  font-size: 65px;
+  font-family: 'Poller One', sans-serif;
+}
+
+.selected {
+  background-color: blue;
+}

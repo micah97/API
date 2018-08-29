@@ -1,13 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
 import { NxModule } from '@nrwl/nx';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserModule } from '@angular/platform-browser';
+import { AppMaterialModule } from '../../../../libs/app-material.module';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
-import { AppMaterialModule } from "libs/app-material.module";
-import { HttpClientModule } from "@angular/common/http";
-import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,8 +17,8 @@ import { ReactiveFormsModule } from "@angular/forms";
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule,
     AppMaterialModule,
+    ReactiveFormsModule,
     NxModule.forRoot()
   ],
   providers: [],

@@ -115,7 +115,7 @@
               "apps/pokemon/src/assets"
             ],
             "styles": [
-              "apps/pokemon/src/styles.css"
+              "apps/pokemon/src/styles.scss"
             ],
             "scripts": []
           },
@@ -164,7 +164,7 @@
             "tsConfig": "apps/pokemon/tsconfig.spec.json",
             "karmaConfig": "apps/pokemon/karma.conf.js",
             "styles": [
-              "apps/pokemon/src/styles.css"
+              "apps/pokemon/src/styles.scss"
             ],
             "scripts": [],
             "assets": [

@@ -1,41 +1,64 @@
-<mat-card *ngIf="selectedPokemon">
-  <div class="card-header">
-    <div class="header">{{selectedPokemon.name}}</div>
-    <span></span>
-    <img [src]="selectedPokemon.sprites?.front_default">
+<div style="position: relative;" *ngIf="isLoading">
+  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
+
+<div *ngIf="selectedPokemon && !isLoading">
+  <div class="block">
+    <img height="100px" width="100px" src="{{selectedPokemon?.sprites?.front_default}}">
   </div>
-  <div class="card-padding">
-    <form [formGroup]="group" (submit)="resetForm.emit()">
-      <mat-form-field>
-        <input matInput type="text" name="name" placeholder="Name" formControlName="name">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Moves">
-          <mat-option [value]="move.move.name" *ngFor="let move of selectedPokemon.moves">{{move.move.name}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Abilities">
-          <mat-option [value]="ability.ability.name" *ngFor="let ability of selectedPokemon.abilities">{{ability.ability.name}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Stats">
-          <mat-option [value]="stat.stat.name" *ngFor="let stat of selectedPokemon.stats">{{stat.stat.name}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="text" name="height" placeholder="Height" formControlName="height">
-        <span matSuffix>inches</span>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="text" name="weight" placeholder="Weight" formControlName="weight">
-        <span matSuffix>lbs</span>
-      </mat-form-field>
-      <mat-card-actions>
-        <button (click)="resetForm.emit()" mat-raised-button>Cancel</button>
-        <button type="submit" mat-raised-button>Save</button>
-      </mat-card-actions>
-    </form>
-  </div>
-</mat-card>
+
+  <mat-card>
+
+    <div class="h1">{{selectedPokemon.name}}</div>
+
+    <div class="card-padding">
+      <form [formGroup]="group" (submit)="save(group.value)">
+        <div class="row">
+          <mat-form-field>
+            <input matInput type="text" name="name" placeholder="Name" formControlName="name">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Moves">
+              <mat-option [value]="move.move.name" *ngFor="let move of selectedPokemon.moves">{{move.move.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field>
+            <mat-select placeholder="Abilities">
+              <mat-option [value]="ability.ability.name" *ngFor="let ability of selectedPokemon.abilities">{{ability.ability.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Stats">
+              <mat-option [value]="stat.stat.name" *ngFor="let stat of selectedPokemon.stats">{{stat.stat.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field>
+            <input matInput type="text" name="height" placeholder="Height" formControlName="height">
+            <span matSuffix>inches</span>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" name="weight" placeholder="Weight" formControlName="weight">
+            <span matSuffix>lbs</span>
+          </mat-form-field>
+        </div>
+
+        <div class="btn-group">
+          <button type="reset" (click)="cancel()" mat-stroked-button>
+              <span class="action">CANCEL</span>
+          </button>
+
+          <button type="submit" mat-stroked-button>
+            <span class="action">SAVE</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </mat-card>
+</div>

@@ -24,11 +24,9 @@ export class AppComponent implements OnInit {
   }
 
   selectDog(dog) {
-    console.log(dog);
     this.dogService.getDog(dog.id)
       .subscribe(res => {
         this.selectedDog = res;
-        console.log(this.selectedDog, 'SELECTED DOG');
       })
   }
 }

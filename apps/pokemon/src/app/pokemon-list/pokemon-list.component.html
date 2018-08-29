@@ -1,11 +1,12 @@
+<div class="block">
+  <div class="h1">POKEMON</div>
+</div>
+
 <mat-card>
-  <div class="card-header">
-    <div class="header">POKEMON</div>
-  </div>
   <div class="card-padding">
     <mat-list>
-      <mat-list-item *ngFor="let poke of pokemon">
-        <span (click)="selectPoke.emit(poke.url)">{{poke.name}}</span>
+      <mat-list-item [class.selected]="selectedPoke === poke" *ngFor="let poke of pokemon" (click)="select(poke.url)">
+        <span>{{poke.name}}</span>
       </mat-list-item>
     </mat-list>
   </div>

@@ -1,0 +1,18 @@
+<mat-card>
+  <div class="hundred">
+    <mat-form-field>
+      <mat-select placeholder="Select a State" (selectionChange)="selectState($event.value)">
+        <mat-option *ngFor="let state of states" [value]="state.state">
+          {{state.state}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+  <mat-list>
+    <mat-list-item [class.selected]="selectedCity === city" (click)="select(city.city)" *ngFor="let city of cities">
+      {{city.city}}
+    </mat-list-item>
+  </mat-list>
+</mat-card>

@@ -1,0 +1,27 @@
+<mat-card>
+    <form [formGroup]="group" autocomplete="off" (submit)="save(group.value)">
+        <div class="row">
+            <mat-form-field class="half">
+              <input matInput type="text" name="name" placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field class="mini">
+              <input matInput type="number" name="mass" placeholder="Mass (lbs)" formControlName="mass">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field class="half">
+              <input matInput type="text" name="height" placeholder="Height (ft)" formControlName="height">
+            </mat-form-field>
+            <mat-form-field class="mini">
+              <input matInput type="text" name="continent" placeholder="Continent" formControlName="continent">
+            </mat-form-field>
+        </div>
+
+        <div class="btn-group">
+            <button mat-button type="button" (click)="delete(selectedAnimal)">Delete</button>
+            <button mat-button type="reset" (click)="cancel()">Cancel</button>
+            <button class="submit" type="submit" mat-raised-button color="accent">Create</button>
+        </div>
+      </form>
+  </mat-card>

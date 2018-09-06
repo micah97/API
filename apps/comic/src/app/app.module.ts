@@ -6,7 +6,7 @@ import { ComicService } from './comic.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppMaterialModule } from './../../../../libs/app-material.module';
+import { AppMaterialModule } from 'libs/app-material.module';
 import { ComicDetailsComponent } from './comic-details/comic-details.component';
 import { ComicSearchComponent } from './comic-search/comic-search.component';
 

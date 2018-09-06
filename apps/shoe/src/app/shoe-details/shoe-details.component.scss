@@ -1,0 +1,38 @@
+mat-card {
+  z-index: 1;
+  height: 270px;
+  position: relative;
+}
+
+form {
+  width: 75%;
+  z-index: 5;
+}
+
+button {
+  span {
+    color: #404040;
+    font-weight: 700;
+  }
+  border-color: #404040;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-group {
+  right: 10px;
+  bottom: -20px;
+  position: absolute;
+}
+
+.crown {
+  left: 5%;
+  bottom: 5%;
+  z-index: -1;
+  font-size: 150px;
+  position: absolute;
+  color: hsl(0, 0%, 98%);
+}

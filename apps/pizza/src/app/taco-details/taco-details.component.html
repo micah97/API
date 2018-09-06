@@ -1,0 +1,27 @@
+<mat-card>
+    <form [formGroup]="group" autocomplete="off" (submit)="save(group.value)">
+      <div class="row">
+          <mat-form-field class="half">
+            <input matInput type="text" name="name" placeholder="Name" formControlName="name">
+          </mat-form-field>
+          <mat-form-field class="mini">
+            <input matInput type="number" name="calories" placeholder="Calories" formControlName="calories">
+          </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field class="half">
+            <input matInput type="text" name="protein" placeholder="Protein" formControlName="protein">
+          </mat-form-field>
+          <mat-form-field class="mini">
+            <input matInput type="text" name="salsa" placeholder="Salsa" formControlName="salsa">
+          </mat-form-field>
+      </div>
+
+      <div class="btn-group">
+          <button mat-stroked-button type="button" color="accent" (click)="delete(selected)"><span>DELETE</span></button>
+          <button mat-button type="reset" (click)="cancel()"><span>CANCEL</span></button>
+          <button class="submit" type="submit" mat-stroked-button color="primary"><span>CREATE</span></button>
+      </div>
+    </form>
+  </mat-card>

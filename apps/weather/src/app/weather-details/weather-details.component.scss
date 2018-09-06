@@ -1,0 +1,35 @@
+@import '../../sass/variables';
+
+mat-card {
+  z-index: -2;
+  height: 260px;
+}
+
+hr {
+  float: left;
+  width: 200px;
+  border: solid 2px $primary;
+}
+
+.h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.cloud {
+  top: 10%;
+  right: 10%;
+  z-index: -1;
+  font-size: 200px;
+  position: absolute;
+  color: hsl(0, 0%, 98%);
+}
+
+.city {
+  bottom: 4%;
+  font-size: 55px;
+  color: #f2f2f2;
+  font-weight: 700;
+  position: absolute;
+  text-transform: uppercase;
+}

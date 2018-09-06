@@ -1,0 +1,29 @@
+<mat-card>
+  <form [formGroup]="group" autocomplete="off" (submit)="save(group.value)">
+      <div class="row">
+          <mat-form-field class="half">
+            <input matInput type="text" name="name" placeholder="Name" formControlName="name">
+          </mat-form-field>
+          <mat-form-field class="mini">
+            <input matInput type="number" name="price" placeholder="Price" formControlName="price">
+          </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field class="half">
+            <input matInput type="text" name="maker" placeholder="Maker" formControlName="maker">
+          </mat-form-field>
+          <mat-form-field class="mini">
+            <input matInput type="number" name="release" placeholder="Release" formControlName="release">
+          </mat-form-field>
+      </div>
+
+      <i class="fas fa-crown crown"></i>
+
+      <div class="btn-group">
+          <button mat-stroked-button type="button" (click)="delete(selected)"><span>DELETE</span></button>
+          <button mat-stroked-button type="reset" (click)="cancel()"><span>CANCEL</span></button>
+          <button class="submit" type="submit" mat-stroked-button color="accent"><span>CREATE</span></button>
+      </div>
+    </form>
+</mat-card>

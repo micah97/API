@@ -1,0 +1,13 @@
+<mat-card *ngIf="weather">
+    <i class="fas fa-cloud cloud"></i>
+
+    <div class="h1">{{weather.current.weather.tp}}&#8451; </div>
+    <hr>
+    <br>
+
+    <h3>{{weather.current.weather.hu}}% Humidity</h3>
+
+    <h3>{{weather.current.weather.ws}}<small style="font-style: italic">(m/s)</small></h3>
+
+    <div class="city">{{weather.city}}</div>
+</mat-card>

@@ -1,0 +1,62 @@
+@import 'sass/custom-theme.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato:300,900|Kanit:800');
+
+* {
+  color: #404040;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(70deg, hsl(0, 0%, 93%) 30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, hsl(0, 0%, 95%) 60%, hsl(0, 0%, 97%) 60%);
+}
+
+mat-card {
+  box-shadow: none !important;
+  background-color: white !important;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+a {
+  color: inherit;
+}
+
+.footer-hr {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #d9d9d9, rgba(0, 0, 0, 0));
+}
+
+.btn-group {
+  float: right;
+  padding-right: 10px;
+  button {
+    margin: 5px;
+    font-size: 18px;
+    color: #404040 !important;
+  }
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.cells {
+  width: 40%;
+  margin: 100px auto;
+}

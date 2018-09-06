@@ -1,0 +1,73 @@
+<div class="header">
+  <div class="bold">LA CUISINE</div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="cells cell-1">
+      <api-pizza-list [pizzas]="pizzas$ | async"
+                      [deselect]="selectedPizza"
+                      (selected)="selectPizza($event)">
+
+      </api-pizza-list>
+    </div>
+
+    <div class="cells cell-2">
+      <api-pizza-details [selectedPizza]="currentPizza$ | async"
+                         [group]="form"
+                         (cancelled)="resetCurrentPizza($event)"
+                         (deleted)="deletePizza($event)"
+                         (saved)="savePizza($event)">
+
+      </api-pizza-details>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="cells cell-1">
+        <api-taco-list [tacos]="tacos$ | async"
+                       (selected)="selectTaco($event)">
+
+        </api-taco-list>
+      </div>
+
+      <div class="cells cell-2">
+        <api-taco-details [selectedTaco]="currentTaco$ | async"
+                          [group]="tacoForm"
+                          (cancelled)="resetCurrentTaco($event)"
+                          (deleted)="deleteTaco($event)"
+                          (saved)="saveTaco($event)">
+
+        </api-taco-details>
+      </div>
+    </div>
+
+</div>
+
+<footer>
+  <hr class="footer-hr">
+  <div class="btn-group">
+
+    <a target="_blank" href="https://www.linkedin.com/in/micah-torres-794558129/">
+      <button mat-mini-fab ><i class="fa fa-linkedin"></i></button>
+    </a>
+
+    <a target="_blank" href="https://www.instagram.com/_____micah/">
+      <button mat-mini-fab><i class="fa fa-instagram"></i></button>
+    </a>
+
+    <a target="_blank" href="http://youtube-playlist-micah.surge.sh/">
+      <button mat-mini-fab><i class="fa fa-youtube"></i></button>
+    </a>
+
+    <a target="_blank" href="https://github.com/micah97/API">
+      <button mat-mini-fab><i class="fa fa-github"></i></button>
+    </a>
+
+    <a href="mailto:micahtorres13@gmail.com">
+      <button mat-mini-fab><i class="fa fa-envelope"></i></button>
+    </a>
+
+  </div>
+</footer>

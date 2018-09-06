@@ -1,0 +1,12 @@
+<mat-card>
+  <div class="card-header">
+    TACOS
+  </div>
+  <div class="card-padding">
+    <mat-list>
+      <mat-list-item [class.selected]="selectedTaco === taco" (click)="selectTaco(taco)" *ngFor="let taco of tacos">
+        {{taco.name}}
+      </mat-list-item>
+    </mat-list>
+  </div>
+</mat-card>

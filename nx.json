@@ -58,6 +58,27 @@
     },
     "dog": {
       "tags": []
+    },
+    "pizza": {
+      "tags": []
+    },
+    "currency": {
+      "tags": []
+    },
+    "weather": {
+      "tags": []
+    },
+    "taco": {
+      "tags": []
+    },
+    "shoe": {
+      "tags": []
+    },
+    "animal": {
+      "tags": []
+    },
+    "animal-e2e": {
+      "tags": []
     }
   }
 }

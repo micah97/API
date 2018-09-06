@@ -1,7 +1,7 @@
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MusicService } from './music.service';
-import { UPDATE } from '../../../../node_modules/@ngrx/store';
+import { UPDATE } from '@ngrx/store';
 
 @Component({
   selector: 'api-root',

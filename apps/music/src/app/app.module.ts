@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { MusicService } from './music.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { MusicListComponent } from './music-list/music-list.component';
-import { AppMaterialModule } from '../../../../libs/app-material.module';
-import { ReactiveFormsModule } from '../../../../node_modules/@angular/forms';
+import { AppMaterialModule } from 'libs/app-material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MusicDetailsComponent } from './music-details/music-details.component';
 
 @NgModule({

@@ -1,0 +1,19 @@
+mat-card {
+  height: 250px;
+}
+
+form {
+  width: 75%;
+  margin: 60px auto auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-group {
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+}

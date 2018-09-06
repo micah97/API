@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppMaterialModule } from '../../../../libs/app-material.module';
+import { AppMaterialModule } from 'libs/app-material.module';
 import { BookSearchComponent } from './book-search/book-search.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 

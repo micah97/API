@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AirListComponent } from './air-list/air-list.component';
-import { AppMaterialModule } from '../../../../libs/app-material.module';
+import { AppMaterialModule } from 'libs/app-material.module';
 import { AirDetailsComponent } from './air-details/air-details.component';
 
 @NgModule({

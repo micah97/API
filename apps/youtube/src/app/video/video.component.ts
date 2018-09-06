@@ -1,4 +1,4 @@
-import { YoutubeService } from './../youtube.service';
+import { YoutubeService } from '../youtube.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

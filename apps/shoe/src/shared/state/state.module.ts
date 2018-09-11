@@ -4,7 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { CommonModule } from '@angular/common';
 import { ShoesEffects } from './shoes.effects';
-import { reducers } from 'apps/shoe/src/shared';
+import { reducers } from '..';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 

@@ -1,8 +1,23 @@
-.card-header {
-  font-size: 25px;
-  font-weight: 700;
+mat-list {
+  margin-top: 25px;
 }
 
-.selected {
-  background-color: #f2f2f2;
+mat-list-item {
+  border-bottom: solid 1px #404040;
+}
+
+mat-list-item:hover {
+  cursor: pointer;
+}
+
+span {
+  text-transform: uppercase;
+}
+
+.card-header {
+  top: 2%;
+  left: 5%;
+  font-size: 35px;
+  font-weight: 700;
+  position: absolute;
 }

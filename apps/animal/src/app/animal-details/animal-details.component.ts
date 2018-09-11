@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Animal } from '../../shared/core/animal.model';
 
 @Component({
   selector: 'api-animal-details',
@@ -7,8 +8,13 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./animal-details.component.scss']
 })
 export class AnimalDetailsComponent implements OnInit {
+  originalName: string;
+  selected: Animal;
 
-  @Input() selectedAnimal;
+  @Input() set selectedAnimal(value: Animal) {
+    if (value) { this.originalName = value.name; }
+    this.selected = Object.assign({}, value);
+  }
   @Input() group: FormGroup;
   @Output() saved = new EventEmitter();
   @Output() deleted = new EventEmitter();

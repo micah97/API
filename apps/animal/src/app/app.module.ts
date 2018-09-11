@@ -1,11 +1,11 @@
 import { NxModule } from '@nrwl/nx';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppMaterialModule } from 'libs/app-material.module';
+import { CommonDataModule } from '../shared/common-data.module';
 import { AnimalListComponent } from './animal-list/animal-list.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { AnimalDetailsComponent } from './animal-details/animal-details.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { AnimalDetailsComponent } from './animal-details/animal-details.componen
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    CommonDataModule,
     AppMaterialModule,
     ReactiveFormsModule,
     NxModule.forRoot()

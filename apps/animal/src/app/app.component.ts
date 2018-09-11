@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { FormBuilder } from '@angular/forms';
-import { AnimalService } from './animal.service';
+import { Component, OnInit } from '@angular/core';
+import { Animal } from '../shared/core/animal.model';
+import { AnimalsFacade } from '../shared/state/animals.facade';
 
 @Component({
   selector: 'api-root',
@@ -8,62 +10,39 @@ import { AnimalService } from './animal.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  animals;
   form: any;
-  selectedAnimal;
+  animals$: Observable<Animal[]> = this.animalsFacade.allAnimals$;
+  currentAnimal$: Observable<Animal> = this.animalsFacade.currentAnimal$;
 
-  constructor(private animalService: AnimalService,
-              private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,
+              private animalsFacade: AnimalsFacade) { }
 
   ngOnInit() {
-    this.getAnimals();
     this.initForm();
+    this.resetCurrentAnimal();
+    this.animalsFacade.loadAll();
+    this.animalsFacade.mutations$.subscribe(_ => this.resetCurrentAnimal());
   }
 
-  getAnimals() {
-    this.animalService.getanimals().subscribe(res => {
-      this.animals = res;
-    });
+  resetCurrentAnimal() {
+    this.selectAnimal({id: null});
   }
 
   selectAnimal(animal) {
-    this.selectedAnimal = animal;
-    this.form.patchValue(this.selectedAnimal);
+    this.animalsFacade.selectAnimal(animal.id);
+    this.form.patchValue(animal);
   }
 
-  cancel() {
-    this.selectedAnimal = false;
-    this.form.reset();
-  }
-
-  save(animal) {
-    if (this.form.valid) {
-      animal.id ? this.update(animal) : this.create(animal);
+  saveAnimal(animal) {
+    if (!animal.id) {
+      this.animalsFacade.addAnimal(animal);
+    } else {
+      this.animalsFacade.updateAnimal(animal);
     }
   }
 
-  update(animal) {
-    this.animalService.update(animal).subscribe(() => {
-      this.form.reset();
-      this.getAnimals();
-      console.log('Sucessful Update');
-    });
-  }
-
-  create(animal) {
-    this.animalService.create(animal).subscribe(() => {
-      this.form.reset();
-      this.getAnimals();
-      console.log('Sucessful Create');
-    });
-  }
-
-  delete(animal) {
-    this.animalService.delete(animal).subscribe(() => {
-      this.form.reset();
-      this.getAnimals();
-      console.log('Successful Delete');
-    });
+  deleteAnimal(animal) {
+    this.animalsFacade.deleteAnimal(animal);
   }
 
   initForm() {

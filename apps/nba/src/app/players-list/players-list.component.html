@@ -6,7 +6,7 @@
     </mat-card-header>
     <div class="position">POSITION</div>
     <mat-list>
-        <mat-list-item [class.selected]="player === selectedPlayer" (click)="selectPlayer(player)" *ngFor="let player of players">
+        <mat-list-item (click)="selected.emit(player)" *ngFor="let player of players">
           <div class="name">{{player.name}}</div>
           <span></span>
           <div class="number">

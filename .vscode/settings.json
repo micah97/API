@@ -3,7 +3,6 @@
   "editor.tokenColorCustomizations": {
     "[Material Theme High Contrast]": {
         "keywords": "#7ea4df",
-        "types": "#1fa8d8",
         "comments": "#727272",
         "textMateRules": [
             {

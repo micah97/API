@@ -1,4 +1,4 @@
-<div class="h1">{{selectedInst?.id ? selectedInst.name : 'CREATE'}}</div>
+<div class="h1">{{selected?.id ? selected.name : 'CREATE'}}</div>
 
 <mat-card>
   <form autocomplete="off" [formGroup]="group" (submit)="save(group.value)">
@@ -19,9 +19,9 @@
       </mat-form-field>
     </div>
     <div class="btn-group">
-      <button class="delete" type="button" (click)="delete(selectedInst)" mat-button><span>DELETE</span></button>
+      <button class="delete" type="button" (click)="delete(selected)" mat-button><span>DELETE</span></button>
       <button class="cancel" type="reset" (click)="cancel()" mat-button><span>CANCEL</span></button>
-      <button class="create" type="submit" mat-button><span>{{selectedInst?.id ? 'UPDATE' : 'CREATE'}}</span></button>
+      <button class="create" type="submit" mat-button><span>{{selected?.id ? 'UPDATE' : 'CREATE'}}</span></button>
     </div>
   </form>
 </mat-card>

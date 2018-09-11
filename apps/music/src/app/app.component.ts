@@ -1,7 +1,8 @@
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { InstrumentsFacade } from '../shared/state/instruments.facade';
+import { Observable } from 'rxjs';
+import { FormBuilder } from '@angular/forms';
+import { Instrument } from '../shared/core/instrument.model';
 import { Component, OnInit } from '@angular/core';
-import { MusicService } from './music.service';
-import { UPDATE } from '@ngrx/store';
 
 @Component({
   selector: 'api-root',
@@ -9,63 +10,40 @@ import { UPDATE } from '@ngrx/store';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  instruments: any;
-  selectedInst: any;
+  form: any;
+  instruments$: Observable<Instrument[]> = this.instrumentsFacade.allInstruments$;
+  currentInstrument$: Observable<Instrument> = this.instrumentsFacade.currentInstrument$;
 
-  form: FormGroup;
-
-  constructor(private musicService: MusicService, private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,
+              private instrumentsFacade: InstrumentsFacade) { }
 
   ngOnInit() {
     this.initForm();
-    this.getInstruments();
+    this.resetCurrentInstrument();
+    this.instrumentsFacade.loadAll();
+    this.instrumentsFacade.mutations$.subscribe(_ => this.resetCurrentInstrument());
   }
 
-  getInstruments() {
-    this.musicService.getInstruments().subscribe(res => {
-      this.instruments = res;
-    });
+  resetCurrentInstrument() {
+    this.selectInstrument({id: null});
   }
 
-  selectInst(inst) {
-    this.selectedInst = inst;
-    this.form.patchValue(this.selectedInst);
+  selectInstrument(instrument) {
+    console.log(instrument, 'INSTRUMENT');
+    this.form.patchValue(instrument);
+    this.instrumentsFacade.selectInstrument(instrument.id);
   }
 
-  cancel() {
-    this.selectedInst = false;
-    this.form.reset();
-  }
-
-  save(inst) {
-    console.log(inst);
-    if (this.form.valid) {
-      inst.id ? this.update(inst) : this.create(inst);
+  saveInstrument(instrument) {
+    if (!instrument.id) {
+      this.instrumentsFacade.addInstrument(instrument);
+    } else {
+      this.instrumentsFacade.updateInstrument(instrument);
     }
   }
 
-  delete(inst) {
-    this.musicService.delete(inst).subscribe(() => {
-      this.form.reset();
-      this.getInstruments();
-      console.log('Sucessful Delete');
-    });
-  }
-
-  update(inst) {
-    this.musicService.update(inst).subscribe(() => {
-      this.form.reset();
-      this.getInstruments();
-      console.log('Sucessful Update');
-    });
-  }
-
-  create(inst) {
-    this.musicService.create(inst).subscribe(() => {
-      this.form.reset();
-      this.getInstruments();
-      console.log('Sucessful Create');
-    });
+  deleteInstrument(instrument) {
+    this.instrumentsFacade.deleteInstrument(instrument);
   }
 
   initForm() {

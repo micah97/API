@@ -77,7 +77,10 @@
     "animal": {
       "tags": []
     },
-    "animal-e2e": {
+    "todo": {
+      "tags": []
+    },
+    "fruit": {
       "tags": []
     }
   }

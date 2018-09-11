@@ -1,0 +1,71 @@
+@import '../../sass/variables';
+
+mat-card {
+  height: 250px;
+}
+
+mat-card * {
+  color: #a6a6a6;
+}
+
+form {
+  margin: 60px auto auto;
+  width: 65%;
+}
+
+mat-icon {
+  width: 50px;
+  height: 50px;
+  color: white !important;
+  font-size: 50px;
+}
+
+button {
+  margin-left: 10px;
+  span {
+    font-size: 18px;
+  }
+}
+
+.fruit {
+  top: -50px;
+  right: 20px;
+  z-index: 100;
+  color: $primary !important;
+  font-size: 110px;
+  position: absolute;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini {
+  width: 30%;
+}
+
+.name {
+  width: 100%;
+}
+
+.delete {
+  border: solid 2px $primary;
+  span {
+    color: $primary;
+  }
+}
+
+.submit {
+  border: solid 2px $green;
+  span {
+    color: $green;
+  }
+}
+
+.btn-group {
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+}

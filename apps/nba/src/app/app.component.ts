@@ -1,6 +1,8 @@
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { NbaService } from './nba.service';
+import { Player } from '../shared/core/player.model';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Observable } from '../../../../node_modules/rxjs';
+import { PlayersFacade } from '../shared/state/player.facade';
 
 @Component({
   selector: 'api-root',
@@ -8,85 +10,39 @@ import { NbaService } from './nba.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  teams;
-  players;
-  positions;
-  selectedPlayer;
+  form: any;
+  players$: Observable<Player[]> = this.playersFacade.allPlayers$;
+  currentPlayer$: Observable<Player> = this.playersFacade.currentPlayer$;
 
-  form: FormGroup;
-
-  constructor(private nbaService: NbaService,
-              private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+              private playersFacade: PlayersFacade) { }
 
   ngOnInit() {
     this.initForm();
-    this.getTeams();
-    this.getPlayers();
-    this.getPositions();
+    this.resetCurrentPlayer();
+    this.playersFacade.loadAll();
+    this.playersFacade.mutations$.subscribe(_ => this.resetCurrentPlayer());
+  }
+
+  resetCurrentPlayer() {
+    this.selectPlayer({id: null});
   }
 
   selectPlayer(player) {
-    this.selectedPlayer = player;
-    this.form.patchValue(this.selectedPlayer);
+    this.form.patchValue(player);
+    this.playersFacade.selectPlayer(player.id);
   }
 
-  getPlayers() {
-    this.nbaService.getPlayers()
-      .subscribe(res => {
-        this.players = res;
-      })
-  }
-
-  getTeams() {
-    this.nbaService.getTeams()
-      .subscribe(res => {
-        this.teams = res;
-      })
-  }
-
-  getPositions() {
-    this.nbaService.getPositions()
-      .subscribe(res => {
-        this.positions = res;
-      })
-  }
-
-  cancel() {
-    this.selectedPlayer = false;
-    this.form.reset();
-  }
-
-  save(player) {
-    if (this.form.valid) {
-      player.id ? this.update(player) : this.create(player);
+  savePlayer(player) {
+    if (!player.id) {
+      this.playersFacade.addPlayer(player);
+    } else {
+      this.playersFacade.updatePlayer(player);
     }
   }
 
-  update(player) {
-    this.nbaService.update(player)
-      .subscribe(() => {
-        this.form.reset()
-        this.getPlayers();
-        console.log('Sucessful Update')
-      })
-  }
-
-  create(player) {
-    this.nbaService.create(player)
-      .subscribe(() => {
-        this.form.reset()
-        this.getPlayers();
-        console.log('Sucessful Create')
-      })
-  }
-
-  delete(player) {
-    this.nbaService.delete(player)
-      .subscribe(() => {
-        this.form.reset();
-        this.getPlayers();
-        console.log('Successful Delete')
-      })
+  deletePlayer(player) {
+    this.playersFacade.deletePlayer(player);
   }
 
   initForm() {

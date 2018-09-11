@@ -1,0 +1,20 @@
+<mat-card>
+  <form [formGroup]="group" autocomplete="off" (submit)="save(group.value)">
+    <div class="column">
+      <mat-form-field class="half">
+        <input matInput type="text" name="title" placeholder="Title" formControlName="title">
+      </mat-form-field>
+      <mat-form-field class="mini">
+        <textarea matInput type="text" name="description" placeholder="Description" formControlName="description"></textarea>
+      </mat-form-field>
+
+      <mat-checkbox formControlName="important" color="primary">High Priority</mat-checkbox>
+    </div>
+
+    <div class="crud-group">
+        <button class="delete" mat-stroked-button type="button" (click)="delete(selected)"><span>DELETE</span></button>
+        <button mat-button type="reset" (click)="cancel()"><span>CANCEL</span></button>
+        <button class="submit" type="submit" mat-raised-button color="primary"><span>{{selected.id ? 'UPDATE' : 'CREATE'}}</span></button>
+    </div>
+  </form>
+</mat-card>

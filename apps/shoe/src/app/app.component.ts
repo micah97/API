@@ -1,4 +1,4 @@
-import { ShoesFacade } from './../shared/state/shoes.facade';
+import { ShoesFacade } from '../shared/state/shoes.facade';
 import { Observable } from 'rxjs';
 import { FormBuilder } from '@angular/forms';
 import { Shoe } from '../shared/core/shoe.model';
@@ -29,8 +29,9 @@ export class AppComponent implements OnInit {
   }
 
   selectShoe(shoe) {
-    this.shoesFacade.selectShoe(shoe.id);
+    console.log(shoe, 'SHOE');
     this.form.patchValue(shoe);
+    this.shoesFacade.selectShoe(shoe.id);
   }
 
   saveShoe(shoe) {

@@ -5,18 +5,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './music-list.component.html',
   styleUrls: ['./music-list.component.scss']
 })
-export class MusicListComponent implements OnInit {
-  selectedInst;
+export class MusicListComponent {
 
   @Input() instruments: any;
   @Output() selected = new EventEmitter();
 
-  constructor() {}
-
-  ngOnInit() {}
-
-  emitInstrument(inst) {
-    this.selectedInst = inst;
-    this.selected.emit(inst);
-  }
 }

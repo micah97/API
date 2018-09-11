@@ -1,0 +1,31 @@
+@import '../../sass/variables';
+
+mat-list-item {
+  padding: 15px;
+  border-bottom: solid 1px #f2f2f2;
+  span {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
+
+mat-list-item:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.title {
+  width: 75%;
+}
+
+.breaker {
+  flex: 1 1 100%;
+}
+
+i {
+  font-size: 25px;
+}
+
+.ex {
+  color: $primary;
+}

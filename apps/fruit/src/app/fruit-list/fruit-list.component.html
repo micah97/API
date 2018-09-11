@@ -1,0 +1,13 @@
+<div class="card">
+
+  <div class="header">
+    FRUIT STAND
+  </div>
+
+  <mat-grid-list cols="3" rowHeight="200px" gutterSize="15px">
+      <mat-grid-tile (click)="selected.emit(fruit)" *ngFor="let fruit of fruits">
+        <span>{{fruit.name}}</span>
+      </mat-grid-tile>
+  </mat-grid-list>
+
+</div>

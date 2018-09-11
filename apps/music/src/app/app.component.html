@@ -6,18 +6,18 @@
   <div class="container">
 
     <div class="cells cell-1">
-      <api-music-list [instruments]="instruments"
-                      (selected)="selectInst($event)">
+      <api-music-list [instruments]="instruments$ | async"
+                      (selected)="selectInstrument($event)">
 
       </api-music-list>
     </div>
 
     <div class="cells cell-2">
-      <api-music-details [selectedInst]="selectedInst"
+      <api-music-details [selectedInst]="currentInstrument$"
                          [group]="form"
-                         (saved)="save($event)"
-                         (deleted)="delete($event)"
-                         (cancelled)="cancel($event)">
+                         (saved)="saveInstrument($event)"
+                         (deleted)="deleteInstrument($event)"
+                         (cancelled)="resetCurrentInstrument($event)">
 
       </api-music-details>
     </div>

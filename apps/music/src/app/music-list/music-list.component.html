@@ -6,7 +6,7 @@
 
     </mat-card-header>
     <mat-list>
-        <mat-list-item [class.selected]="inst === selectedInst" (click)="emitInstrument(inst)" *ngFor="let inst of instruments">
+        <mat-list-item (click)="selected.emit(inst)" *ngFor="let inst of instruments">
           <div class="name">
             {{inst.name}}
           </div>

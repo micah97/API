@@ -2126,6 +2126,212 @@
           }
         }
       }
+    },
+    "todo": {
+      "root": "apps/todo/",
+      "sourceRoot": "apps/todo/src",
+      "projectType": "application",
+      "prefix": "API",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/todo",
+            "index": "apps/todo/src/index.html",
+            "main": "apps/todo/src/main.ts",
+            "polyfills": "apps/todo/src/polyfills.ts",
+            "tsConfig": "apps/todo/tsconfig.app.json",
+            "assets": [
+              "apps/todo/src/favicon.ico",
+              "apps/todo/src/assets"
+            ],
+            "styles": [
+              "apps/todo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/todo/src/environments/environment.ts",
+                  "with": "apps/todo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "todo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "todo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "todo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/todo/src/test.ts",
+            "polyfills": "apps/todo/src/polyfills.ts",
+            "tsConfig": "apps/todo/tsconfig.spec.json",
+            "karmaConfig": "apps/todo/karma.conf.js",
+            "styles": [
+              "apps/todo/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/todo/src/favicon.ico",
+              "apps/todo/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/todo/tsconfig.app.json",
+              "apps/todo/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "fruit": {
+      "root": "apps/fruit/",
+      "sourceRoot": "apps/fruit/src",
+      "projectType": "application",
+      "prefix": "API",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/fruit",
+            "index": "apps/fruit/src/index.html",
+            "main": "apps/fruit/src/main.ts",
+            "polyfills": "apps/fruit/src/polyfills.ts",
+            "tsConfig": "apps/fruit/tsconfig.app.json",
+            "assets": [
+              "apps/fruit/src/favicon.ico",
+              "apps/fruit/src/assets"
+            ],
+            "styles": [
+              "apps/fruit/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/fruit/src/environments/environment.ts",
+                  "with": "apps/fruit/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "fruit:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "fruit:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "fruit:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/fruit/src/test.ts",
+            "polyfills": "apps/fruit/src/polyfills.ts",
+            "tsConfig": "apps/fruit/tsconfig.spec.json",
+            "karmaConfig": "apps/fruit/karma.conf.js",
+            "styles": [
+              "apps/fruit/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/fruit/src/favicon.ico",
+              "apps/fruit/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/fruit/tsconfig.app.json",
+              "apps/fruit/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "fruit-e2e": {
+      "root": "apps/fruit-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/fruit-e2e/protractor.conf.js",
+            "devServerTarget": "fruit:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/fruit-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

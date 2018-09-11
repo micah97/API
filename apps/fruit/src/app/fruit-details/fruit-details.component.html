@@ -1,0 +1,29 @@
+<mat-card>
+
+  <i class="fas fa-apple-alt fruit"></i>
+
+  <form [formGroup]="group" autocomplete="off" (submit)="save(group.value)">
+    <div class="row">
+      <mat-form-field class="name">
+        <input matInput type="text" name="name" placeholder="Name" formControlName="name">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="mini">
+        <input matInput type="number" name="calories" placeholder="Calories (grams)" formControlName="calories">
+      </mat-form-field>
+      <mat-form-field class="mini">
+        <input matInput type="number" name="carbohydrates" placeholder="Carbohydrates (grams)" formControlName="carbohydrates">
+      </mat-form-field>
+      <mat-form-field class="mini">
+        <input matInput type="number" name="sugar" placeholder="Sugar (grams)" formControlName="sugar">
+      </mat-form-field>
+    </div>
+
+    <div class="btn-group">
+      <button type="button" class="delete" mat-stroked-button (click)="delete(selected)"><span>DELETE</span></button>
+      <button type="reset" mat-button (click)="cancel()"><span>CANCEL</span></button>
+      <button type="submit" class="submit" mat-stroked-button color="primary"><span>CREATE</span></button>
+    </div>
+  </form>
+</mat-card>

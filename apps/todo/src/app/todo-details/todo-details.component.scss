@@ -1,0 +1,32 @@
+@import '../../sass/variables';
+
+mat-card {
+  min-height: 200px;
+}
+
+.delete {
+  border: solid 1px $primary;
+}
+
+.submit {
+  span {
+    color: white;
+  }
+}
+
+.column {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.crud-group {
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+  button {
+    margin: 5px;
+    font-size: 18px;
+  }
+}

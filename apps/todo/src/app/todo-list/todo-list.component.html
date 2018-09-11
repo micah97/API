@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-list>
+      <mat-list-item *ngFor="let todo of todos" (click)="selected.emit(todo)">
+        <span class="title">{{todo.title}}</span>
+        <span class="breaker"></span>
+        <i *ngIf="todo.important === true" class="fas fa-exclamation-triangle ex"></i>
+      </mat-list-item>
+  </mat-list>
+</mat-card>

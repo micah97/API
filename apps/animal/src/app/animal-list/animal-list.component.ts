@@ -5,18 +5,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './animal-list.component.html',
   styleUrls: ['./animal-list.component.scss']
 })
-export class AnimalListComponent implements OnInit {
-  selectedAnimal;
+export class AnimalListComponent {
 
   @Input() animals;
-  @Output() select = new EventEmitter();
+  @Output() selected = new EventEmitter();
 
-  constructor() {}
-
-  ngOnInit() {}
-
-  selectAnimal(animal) {
-    this.select.emit(animal);
-    this.selectedAnimal = animal;
-  }
 }

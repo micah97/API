@@ -1,39 +1,42 @@
 import { FormGroup } from '@angular/forms';
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Instrument } from '../../shared/core/instrument.model';
 
 @Component({
   selector: 'api-music-details',
   templateUrl: './music-details.component.html',
   styleUrls: ['./music-details.component.scss']
 })
-export class MusicDetailsComponent implements OnInit {
+export class MusicDetailsComponent {
+  originalName: string;
+  selected: Instrument;
+
+  @Input() set selectedInst(value: Instrument) {
+    if (value) { this.originalName = value.name; }
+    this.selected = Object.assign({}, value);
+  }
   @Input() group: FormGroup;
-  @Input() selectedInst: any;
   @Output() saved = new EventEmitter();
   @Output() deleted = new EventEmitter();
   @Output() cancelled = new EventEmitter();
 
-  constructor() {}
-
-  ngOnInit() {}
-
   reset() {
-    this.selectedInst = false;
     this.group.reset();
+    this.selectedInst = {} as any;
   }
 
   cancel() {
+    this.reset();
     this.cancelled.emit();
-    this.reset();
   }
 
-  save(inst) {
-    this.saved.emit(inst);
+  save(instrument) {
     this.reset();
+    this.saved.emit(instrument);
   }
 
-  delete(inst) {
-    this.deleted.emit(inst);
+  delete(instrument) {
     this.reset();
+    this.deleted.emit(instrument);
   }
 }

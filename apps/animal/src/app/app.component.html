@@ -1,18 +1,18 @@
 <div class="container">
 
     <div class="cells cell-1">
-      <api-animal-list [animals]="animals"
-                       (select)="selectAnimal($event)">
+      <api-animal-list [animals]="animals$ | async"
+                       (selected)="selectAnimal($event)">
 
       </api-animal-list>
     </div>
 
     <div class="cells cell-2">
-      <api-animal-details [selectedAnimal]="selectedAnimal"
-                        [group]="form"
-                        (cancelled)="cancel($event)"
-                        (deleted)="delete($event)"
-                        (saved)="save($event)">
+      <api-animal-details [selectedAnimal]="currentAnimal$ | async"
+                          [group]="form"
+                          (cancelled)="resetCurrentAnimal($event)"
+                          (deleted)="deleteAnimal($event)"
+                          (saved)="saveAnimal($event)">
 
       </api-animal-details>
     </div>

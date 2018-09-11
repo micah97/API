@@ -1,29 +1,28 @@
 import { FormGroup } from '@angular/forms';
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Player } from '../../shared/core/player.model';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'api-players-details',
   templateUrl: './players-details.component.html',
   styleUrls: ['./players-details.component.scss']
 })
-export class PlayersDetailsComponent implements OnInit {
+export class PlayersDetailsComponent {
+  originalName: string;
+  selected: Player;
 
-  @Input() teams: any;
-  @Input() positions: any;
-  @Input() group: FormGroup;
-  @Input() selectedPlayer: any;
-  @Output() saved = new EventEmitter;
-  @Output() deleted = new EventEmitter;
-  @Output() cancelled = new EventEmitter;
-
-  constructor() { }
-
-  ngOnInit() {
+  @Input() set selectedPlayer(value: Player) {
+    if (value) { this.originalName = value.name; }
+    this.selected = Object.assign({}, value);
   }
+  @Input() group: FormGroup;
+  @Output() saved = new EventEmitter();
+  @Output() deleted = new EventEmitter();
+  @Output() cancelled = new EventEmitter();
 
   reset() {
     this.group.reset();
-    this.selectedPlayer = { } as any;
+    this.selectedPlayer = {} as any;
   }
 
   cancel() {
